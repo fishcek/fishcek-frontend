@@ -2,16 +2,16 @@
     <div>
         <Sidebar/>
         <div class="cekPenipuan-page container p-t-80">
-            <div class="m-t-10 boxed">
+            <div class="m-t-10 boxed b-r">
                 <h4 class="boxed-title">Laporkan Nomor {{kategori}} Penipuan</h4>
                 <h6 class="boxed-subtitle">Laporan kamu sangat berarti untuk mencegah terjadinya penipuan di masa mendatang oleh pelaku yang sama.</h6>
             </div>
             <div class="m-t-10">
-                <div class="boxed-fluid">
-                    <div class="boxed bc-image1">
+                <div class="boxed-fluid b-r">
+                    <div class="boxed b-r bc-image1">
                         <div class="container">
                             <h2 class=" text-center">Isi Formnya Ya</h2>
-                            <div class="boxed-form c-shadow">
+                            <div class="boxed-form bc-blur b-r c-shadow">
                                 <b-form @submit="onSubmit" @reset="onReset"> 
                                     <div class="boxed-form-title ">
                                         <h6>Beritahu Kami Siapa Dia</h6>
@@ -138,9 +138,12 @@
                                         :state="Boolean(lampiran)"
                                         multiple
                                         class="form-control custom-file-input"
+                                        @change="cekFile()"
+                                        ref="myFiles"
+                                        id="file"
                                         ></b-form-file>
                                     </b-form-group>
-                                    
+                                    {{lampiran}}
                                     <div class="text-center">
                                         <b-button type="submit" class="btn-cs btn-cs-blue m-t-5 m-r-10 ">Submit</b-button>
                                         <b-button type="reset" class="btn-cs btn-cs-red m-t-5 ">Reset</b-button>
@@ -157,11 +160,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="end-boxed">
-                        <h6 class="text-center">Terimakasih Telah Melapor. Laporan Kamu Akan Kami Proses</h6>
-                    </div>
-                </div>
-                
+                </div>            
+                <div class="m-t-10 b-r boxed">
+                    <h6 class="text-center text-spacing">Terimakasih Telah Melapor. Laporan Kamu Akan Kami Proses</h6>
+                </div>    
             </div>
         </div>
         <Footer/>
@@ -849,6 +851,9 @@ export default {
             
             console.log(this.tabIndex)
             console.log(this.pencarianPenipuan)
+        },
+        cekFile(){
+            console.log(this.lampiran)
         },
         onSubmit(event) {
             event.preventDefault()

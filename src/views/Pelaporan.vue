@@ -2,31 +2,31 @@
     <div>
         <Sidebar/>
         <div class="cekPenipuan-page container p-t-80">
-            <div class="m-t-10 boxed bc-image1">
+            <div class="m-t-10 boxed b-r bc-image1">
                 <h4 class="boxed-title txt-white">Laporkan Nomor Rekening Atau Nomor Telepon Penipuan</h4>
                 <h6 class="boxed-subtitle txt-white">Laporan kamu sangat berarti untuk mencegah terjadinya penipuan di masa mendatang oleh pelaku yang sama.</h6>
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="m-t-10 p-30 boxed-hover">
+                    <div class="m-t-10 p-30 b-r boxed-hover">
                         <div class="text-center">
                             <h5 class="title txt-blue m-b-20">Nomor Telepon</h5>
                             <h6 class="subtitle m-b-20">Laporkan nomor telepon pelaku tindakan penipuan.</h6>
-                            <input type="button" class="btn-cs-card btn-cs-blue-outline" value="Laporkan" to="/lapor/notelepon">
+                            <b-button class="btn-cs-card btn-cs-blue-outline" to="/lapor/notelepon">Laporkan</b-button>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-6">
-                    <div class="m-t-10 p-30  boxed-hover">
+                    <div class="m-t-10 p-30 b-r boxed-hover">
                         <div class="text-center">
                             <h5 class="title txt-blue m-b-20">Nomor Rekening</h5>
                             <h6 class="subtitle m-b-20">Laporkan nomor rekening pelaku tindakan penipuan.</h6>
-                            <input type="button" class="btn-cs-card btn-cs-blue-outline" value="Laporkan" to="/lapor/notelepon">
+                            <b-button class="btn-cs-card btn-cs-blue-outline" to="/lapor/norekening">Laporkan</b-button>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="m-t-10 boxed bc-shadow">
+            <div class="m-t-10 boxed b-r bc-shadow">
                 <div class="row">
                     <div class="col-lg-6 col-md-12">
                         <h4 class="boxed-title fs-18"><strong>Lapor Penipuan Online</strong></h4>
@@ -46,8 +46,8 @@
                     </div>
                 </div>               
             </div>
-            <div class="m-t-10 end-boxed bc-shadow">
-                <h6 class="text-center">Terimakasih Telah Melapor. Laporan Kamu Akan Kami Proses</h6>                
+            <div class="m-t-10 boxed b-r bc-shadow">
+                <h6 class="text-center text-spacing">Terimakasih Telah Melapor. Laporan Kamu Akan Kami Proses</h6>                
             </div>
         </div>
         <Footer/>

@@ -21,7 +21,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -419,6 +419,7 @@ input[type='file'] {
 .cekPenipuan-page .boxed-fluid{
   background-color: #fff ;  
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+  
 }
 
 .cekPenipuan-page .boxed-fluid .boxed{
@@ -451,7 +452,6 @@ input[type='file'] {
 
 .boxed-hover:hover  {
   border: 1px solid #2196f3;
-  border-radius: 10px;
   transition: 0.3s;
 }
 
@@ -460,8 +460,6 @@ input[type='file'] {
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
   padding: 10px 20px 20px 20px;
 }
 
@@ -470,6 +468,7 @@ input[type='file'] {
   font-weight: 700;
   padding-bottom: 10px;
   padding-top: 10px;
+  color: #000;
 }
 
 .form-group .d-block{
@@ -484,7 +483,6 @@ input[type='file'] {
   margin-left: auto;
   margin-right: auto;
   background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
 }
 
 .boxed-input span{
@@ -535,7 +533,8 @@ input[type='file'] {
   height: 50vh;
   padding-left: 20px;
 }
-.end-boxed{
+
+.text-spacing{
   text-align: center;
   padding: 20px;
   letter-spacing: 1px;
@@ -681,6 +680,7 @@ input[type='file'] {
   background-color: #fff;
   padding: 10px;  
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+  border-radius: 10px;
 }
 
 .myReport .boxed-fluid{
@@ -1165,6 +1165,26 @@ input[type='file'] {
   border-bottom: 1px solid #e5e5e5 !important;
 }
 
+.b-r-t{
+  border-top-right-radius: 10px !important;
+  border-top-left-radius: 10px !important;
+}
+
+.b-r-b{
+  border-bottom-right-radius: 10px !important;
+  border-bottom-left-radius: 10px !important;
+}
+
+.b-r{
+  border-radius: 10px;
+}
+
+.bc-blur{  
+  background-color: rgba(255, 255, 255, 0.4);    
+  backdrop-filter: blur(10px);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+}
+
 .bc-gray-light{
   background-color: #fff !important;
 }
@@ -1373,7 +1393,7 @@ input[type='file'] {
 }
 
 .btn-cs-blue-outline{
-  border: 2px solid #2196f3;
+  border: 2px solid #2196f3 !important;
   color: #2196f3;
 }
 
@@ -1398,7 +1418,7 @@ input[type='file'] {
 
 .btn-cs-blue-outline:hover {
   background: #2196f3 !important;
-  color: #fff;
+  color: #fff !important;
   transition: 0.3s;
 }
 

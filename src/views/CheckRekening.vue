@@ -2,12 +2,12 @@
     <div>
         <Navbar/>
         <div class="hasilPenipuan container p-t-80">
-            <div class="m-t-10 boxed">
+            <div class="m-t-10 b-r boxed">
                 <h4 class="boxed-title"> <b-icon icon="credit-card2-back" class="m-r-10 txt-blue" ></b-icon>{{norekening}}</h4>
             </div>
             <div class="m-t-10">
-                <div class="boxed-fluid">
-                    <div class="boxed bc-image1">
+                <div class="boxed-fluid b-r">
+                    <div class="boxed bc-image1 b-r-t">
                         <b-row class="p-10">
                             <b-col cols="12" lg="5" md="12" sm="12" class="left text-center p-l-40">
                                 <b-icon icon="person-circle" class="profil text-white" ></b-icon>
@@ -24,7 +24,7 @@
                             </b-col>
                         </b-row>
                     </div>
-                    <div class="boxed">
+                    <div class="boxed b-r-b">
                         <h3 class="boxed-title">Informasi</h3>
                         <b-row class="m-t-10" >
                             <b-col cols="12" lg="5" md="12" sm="12">
@@ -65,7 +65,7 @@
                 </div>
                 
             </div>
-            <div class="container m-t-10 p-20 bc-white bc-shadow">
+            <div class="container m-t-10 p-20 b-r bc-white bc-shadow">
                 <h3 class="boxed-title p-b-20">Laporan</h3>   
                 <div class="boxed-scroll-y">
                     <div class="boxed-detail border-bottom m-b-20" v-for="report of reports" :key="report">                                        
@@ -75,11 +75,11 @@
                     </div>                    
                 </div>             
             </div>
-            <div class="container m-t-10 p-20 bc-white bc-shadow">
+            <div class="container m-t-10 p-20 b-r bc-white bc-shadow">
                 <h3 class="boxed-title p-b-20">Bisnis</h3> 
                 <div class="card-group p-b-20">  
-                    <div class="card">
-                        <img class="card-img-top" src="../assets/img/dummy.png" alt="Card image cap">
+                    <div class="card b-r">
+                        <img class="card-img-top b-r-t" src="../assets/img/dummy.png" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title">Koding Kita</h5>
                             <p class="card-text">Koding Kita adalah Perusahaan yang bergerak dalam jasa pembuatan aplikasi berbasis mobile/web dan juga memberikan informasi dan hiburan</p>
@@ -89,7 +89,7 @@
                 </div>          
             </div>
             
-            <div class="container m-t-10 p-20 bc-white bc-shadow">
+            <div class="container m-t-10 p-20 b-r bc-white bc-shadow">
                 <h3 class="boxed-title p-b-20">Review</h3>   
                 <div class="boxed-scroll-y">
                     <div class="boxed-detail border-bottom p-b-5 m-b-20" v-for="review of reviews" :key="review">                        
