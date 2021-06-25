@@ -11,7 +11,6 @@
 * {
 	margin: 0px; 
 	padding: 0px; 
-	box-sizing: border-box;
 }
 body, html {
 	height: 100%; 
@@ -19,15 +18,6 @@ body, html {
 body {
   font-family: "Open Sans", sans-serif;
   color: #212121;
-}
-
-a {
-  color: #47b2e4;
-}
-
-a:hover {
-  color: #0069c0;
-  text-decoration: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -243,61 +233,29 @@ input[type='file'] {
   margin-top: 20px;
   border-top: 1px dashed  #999999 !important;
 }
-.nav-vertical .nav-item a{  
-  color: #212121;
-  font-weight: 600;
-  text-decoration: none;
-}
 
-/* .nav-vertical .nav-item a:hover{  
-  color: #2196f3 !important;
-  font-weight: 600;
-} */
-
-.nav-vertical .nav-item .router-link-active{  
-  color: #2196f3 !important;
-  font-weight: 600;
-}
-
-.nav-vertical .nav-sub-menu{
-  padding-left: 30px;
-  color: #212121;
-}
-
-.nav-sub-menu:hover .dropsub-menu{
-  color: #d61212 !important;
-}
-
-.profil-notif-sidebar {
-  position: relative;
-  display: inline-block;
-  background-color: #2196f3;
-}
-
-.profil-sidebar {
-  position: relative;
-  display: inline-block;
-  list-style: none;
-}
-.profil-sidebar img{
-  padding: 0px;
-  width: 40px;
-}
-
-.notif-sidebar {
-  position: relative;
-  display: inline-block;
-  list-style: none;
-}
-
-.notif-sidebar .notif-icon{
+.nav-vertical li a{  
   color: #212121 !important;
+  font-weight: 600;
+  text-decoration: none;
 }
 
-.notif-sidebar .notif-icon:hover{
+.nav-vertical .collapse-menu li a{  
+  color: #000 !important;
+  font-weight: 600;
   text-decoration: none;
-  color: #f44336 !important;
+  padding-left: 30px;
 }
+
+.nav-vertical .collapse-menu li a:hover, .nav-vertical li a:hover, .nav .router-link-active, .bg-focus{  
+  background-color: rgba(229, 229, 229, 0.5) 
+}
+
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Hero Section
@@ -1471,11 +1429,17 @@ input[type='file'] {
   background-color: #e5e5e5;
   border: none !important;
   text-align: center;
+  position: sticky;
 }
 
 .table-cs .table-body{
   background-color: #eeeeee;
   text-align: center;
+}
+
+.table-report {
+  overflow-y: auto;
+  height: 50vh;
 }
 /*--------------------------------------------------------------
 # Responsive

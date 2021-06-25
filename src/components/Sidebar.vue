@@ -21,16 +21,16 @@
                 <div class="p-3">
                   <nav class="mb-3">
                     <b-nav vertical class="nav-vertical">
-                      <b-nav-item to="/profil" @click="hide">Profil</b-nav-item>
-                      <b-nav-item v-b-toggle.collapse class="dropsub-menu">Laporkan Penipuan</b-nav-item>                     
-                      <b-collapse id="collapse" class="nav-sub-menu">
+                      <b-nav-item to="/profil" @click="hide, onFocus('c')">Profil</b-nav-item>
+                      <b-nav-item v-b-toggle.collapse-a id="bcollapse-a" @click="onFocus('a')">Laporkan Penipuan</b-nav-item>                     
+                      <b-collapse id="collapse-a" class="collapse-menu" >
                         <b-nav-item to="/lapor/notelepon" replace @click="hide">Nomor Telepon</b-nav-item>
                         <b-nav-item to="/lapor/norekening" replace @click="hide">Nomor Rekening</b-nav-item>
                       </b-collapse>
-                      <b-nav-item v-b-toggle.collapse-b>Laporan Saya</b-nav-item>                     
-                      <b-collapse id="collapse-b" class="nav-sub-menu">
-                        <b-nav-item to="/myreport/notelepon" replace @click="hide">Nomor Telepon</b-nav-item>
-                        <b-nav-item to="/myreport/norekening" replace @click="hide">Nomor Rekening</b-nav-item>
+                      <b-nav-item v-b-toggle.collapse-b id="bcollapse-b" @click="onFocus('b')">Laporan Saya</b-nav-item>                     
+                      <b-collapse id="collapse-b" class="collapse-menu">
+                        <b-nav-item to="/myreport/notelepon" replace @click="hide, onFocus('c')">Nomor Telepon</b-nav-item>
+                        <b-nav-item to="/myreport/norekening" replace @click="hide, onFocus('c')">Nomor Rekening</b-nav-item>
                       </b-collapse>
                       <b-nav-item to="/myartikel" @click="hide">Artikel Saya</b-nav-item>
                     </b-nav>
@@ -106,14 +106,20 @@ export default {
     ...mapActions({
       setToken:'auth/setToken' 
     }),
-    onOver() {
-      this.$refs.dropdown.visible = true;
-    },
-    onLeave() {
-      this.$refs.dropdown.visible = false;
-    },
     goHome(){
       this.$router.push('/home');
+    },
+    onFocus(nav){
+      if(nav=='a'){
+        document.getElementById('bcollapse-a').classList.add("bg-focus");
+        document.getElementById('bcollapse-b').classList.remove("bg-focus");
+      }else if(nav=='b'){
+        document.getElementById('bcollapse-b').classList.add("bg-focus");
+        document.getElementById('bcollapse-a').classList.remove("bg-focus");
+      }else{
+        document.getElementById('bcollapse-a').classList.remove("bg-focus");
+        document.getElementById('bcollapse-b').classList.remove("bg-focus");
+      }
     }
   },
   
