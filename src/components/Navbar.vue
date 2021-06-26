@@ -5,12 +5,6 @@
             <b-navbar-brand href="#">
               <img @click="goHome()" src="../assets/img/logo-full.png" class="nav-img" >
             </b-navbar-brand>
-            <b-navbar-toggle target="nav-collapse" class="text-dark">
-              <template #default="{ expanded }">
-              <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
-              <b-icon v-else icon="chevron-bar-down"></b-icon>
-            </template>
-            </b-navbar-toggle>
             <b-collapse id="nav-collapse" is-nav>
               
               <nav class="nav-menu me-auto">
@@ -31,12 +25,13 @@
                     </template>
                   </b-nav-item>
                 </b-navbar-nav>
-              </nav>
+              </nav>              
+            </b-collapse>
               <div v-if="guest==0" class="nav-right">
                 <router-link to="/login"><button class="btn-cs btn-cs-blue m-r-10">Login</button></router-link>
                  <router-link to="/register"><button class="btn-cs btn-cs-blue">Register</button></router-link>
               </div>
-              <div v-else>
+              <div v-else class="nav-right">
                 <div class="notif-dropdown">
                   <b-nav-item-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
                       <template #button-content>
@@ -57,7 +52,14 @@
                   </b-nav-item-dropdown>
                 </div>
               </div>
-            </b-collapse>
+              
+            <b-navbar-toggle target="nav-collapse" class="text-dark">
+              <template #default="{ expanded }">
+              <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
+              <b-icon v-else icon="chevron-bar-down"></b-icon>
+            </template>
+
+            </b-navbar-toggle>
           </div>
         </b-navbar>
     </div>

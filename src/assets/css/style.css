@@ -158,16 +158,13 @@ input[type='file'] {
 .notif-dropdown {
   position: relative;
   display: inline-block;
-  top: 5px !important;
+  top: 2px !important;
   list-style: none;
-}
-.notif-dropdown span{
-  margin-right: 10px;
-  font-size: 20px !important;
 }
 
 .notif-dropdown .notif-icon{
   color: #212121 !important;
+  font-size: 18px !important;
 }
 
 .notif-dropdown .notif-icon:hover{
@@ -185,23 +182,53 @@ input[type='file'] {
   transition: 0.3s;
 }
 
-@media (max-width: 1366px) {
-  .nav-menu .drop-down .drop-down ul {
-    left: -90%;
+@media (max-width: 900px) {
+  .nav-img{
+    width: 150px;
   }
-  .nav-menu .drop-down .drop-down:hover > ul {
-    left: -100%;
-  }
-  .nav-menu .drop-down .drop-down > a:after {
-    content: "\ea9d";
+  .nav-right{
+    margin-left: 50%;
   }
 }
-@media (max-width: 988px) {
-  .nav-menu a{
-    color: #212121;
-    font-weight: 500;
-    outline: none;
-    display: block !important;
+
+@media (max-width: 560px) {
+  .nav-img{
+    width: 140px;
+  }
+  .nav-right{
+    margin-left: 35%;
+  }
+}
+
+@media (max-width: 415px) {
+  .nav-img{
+    width: 100px;
+  }
+  .nav-right{
+    margin-left: 18%;
+  }
+  .notif-dropdown .notif-icon{
+    font-size: 16px !important;
+  }
+  .profil-dropdown img{
+    padding: 0px;
+    width: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .nav-img{
+    width: 100px;
+  }
+  .nav-right{
+    margin-left: 8%;
+  }
+  .notif-dropdown .notif-icon{
+    font-size: 16px !important;
+  }
+  .profil-dropdown img{
+    padding: 0px;
+    width: 30px;
   }
 }
 
@@ -1407,7 +1434,7 @@ input[type='file'] {
 
 .btn-cs-outline-circle{
   border-radius: 100%;
-  padding: 5px 8px;
+  padding: 7px 8px;
   transition: 0.3s;
   margin-right: 10px;
 }
