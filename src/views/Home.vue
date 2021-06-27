@@ -1,46 +1,51 @@
 <template>
   <div class="home">
     <Navbar/>
-    <section id="hero" class="bc-blue-light">     
-      <div class="d-flex">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6 d-flex flex-column">
-              <h1>Solusi Untuk Transaksi Online Kamu</h1>
-              <h2>Berapapun Harga Ikan Hias Akan Terasa Murah Jika Adanya Kepercayaan</h2>
-              <!-- <div class="">
-                <a href="#about" class="btn-cs btn-cs-blue">Ayo Mulai!!</a>
-              </div> -->
-            </div>
-            <div class="col-lg-6 order-1 order-lg-2 hero-img">
-              <img src="assets/img/hero-img.png" class="img-fluid" alt="">
-              <!--<img src="assets/img/hero-img.png" class="img-fluid animated" alt=""> Use it if you want an animated up and down to your vector-->
+    <div class="bc-image2">
+      <section id="hero" class="">     
+        <div class="d-flex">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6 d-flex flex-column">
+                <h1>Solusi Untuk Transaksi Online Kamu</h1>
+                <h2>Berapapun Harga Ikan Hias Akan Terasa Murah Jika Adanya Kepercayaan</h2>
+                <!-- <div class="">
+                  <a href="#about" class="btn-cs btn-cs-blue">Ayo Mulai!!</a>
+                </div> -->
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2">
+                <!--<img src="assets/img/hero-img.png" class="img-fluid animated" alt=""> Use it if you want an animated up and down to your vector-->
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <img class="wave-home-front" src="../assets/img/wave-1.svg">
-    </section><!-- End Hero -->
+      </section><!-- End Hero -->
 
-    <section id="cekPenipuan" class="cekPenipuan m-t-30">
-      <div class="container" data-aos="fade-up">
-          <h2 class="fs-35 m-b-20">Cek Penipuan</h2>
-        <div class="cekPenipuan-input p-10">
-            <h4 class="text-center fs-16 m-t-10 m-b-20">Silahkan Pilih Kategori</h4>
-            <div class="container cekPenipuan-form text-center">
-              <b-tabs content-class="mt-3 txt-blue" align="center" v-model="tabIndex">
-                <b-tab title="No Rekening" active @click="pencarianClear()">
-                </b-tab>
-                <b-tab title="No Telepon" @click="pencarianClear()">
-                </b-tab>
-                <input type="number" class="form-control m-t-10" ref="pencarian" :placeholder="textPlaceholder" v-model="pencarianPenipuan"/>
-                  <p class="text-error">{{txterror}}</p>
-                </b-tabs>
-             <input type="button" class="btn-cs btn-cs-blue m-t-5 m-b-10" value="Cek Penipuan" @click="cariPenipuan()" > 
+      <section id="cekPenipuan" class="cekPenipuan">
+        <div class="container" data-aos="fade-up">
+            <h2 class="fs-35 m-b-20">Cek Penipuan</h2>
+            <div class="cekPenipuan-input bc-transparent p-10">
+                <h4 class="text-center fs-16 m-t-10 m-b-20">Silahkan Pilih Kategori</h4>
+                <div class="container cekPenipuan-form text-center">
+                  <b-tabs 
+                    pills 
+                    content-class="m-t-13 "
+                    active-nav-item-class="btn-cs btn-cs-blue"
+                    align="center" v-model="tabIndex" >
+                    <b-tab title="No Rekening" class="fs-10" @click="pencarianClear()">
+                    </b-tab>
+                    <b-tab title="No Telepon" @click="pencarianClear()">
+                    </b-tab>
+                    <input type="number" class="form-control m-t-10" ref="pencarian" :placeholder="textPlaceholder" v-model="pencarianPenipuan"/>
+                      <p class="text-error">{{txterror}}</p>
+                    </b-tabs>
+                <input type="button" class="btn-cs btn-cs-blue m-t-5 m-b-10" value="Cek Penipuan" @click="cariPenipuan()" > 
+                
+                </div>
             </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
     <Footer/>
   </div>
 </template>

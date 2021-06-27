@@ -93,6 +93,10 @@ input[type='file'] {
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 
+.nav-pills .nav-item .nav-link .active{
+  background-color: #128C7E !important;
+}
+
 .nav-img{
   margin-top: -5px;
   width: 120px;
@@ -182,7 +186,7 @@ input[type='file'] {
   transition: 0.3s;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 980px) {
   .nav-img{
     width: 150px;
   }
@@ -279,11 +283,6 @@ input[type='file'] {
 }
 
 
-
-
-
-
-
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -297,13 +296,7 @@ input[type='file'] {
   height: 65vh;
   padding: 100px 0px 0px 0px;
 }
-#hero .wave-home-front{
-  position: relative;
-  bottom: 205px;
-  width: 100%;
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-}
+
 #hero .container {
   padding-top: 0px;
 }
@@ -327,66 +320,6 @@ input[type='file'] {
   text-decoration: none;
 }
 
-@media (max-width: 991px) {
-  #hero {
-    height: 90vh;
-    text-align: center;
-  }
-  #hero .animated {
-    -webkit-animation: none;
-    animation: none;
-  }
-  #hero .hero-img {
-    text-align: center;
-  }
-  #hero .hero-img img {
-    width: 50%;
-  }
-}
-
-@media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
-  }
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
-  #hero .hero-img img {
-    width: 70%;
-  }
-}
-
-@media (max-width: 575px) {
-  #hero .hero-img img {
-    width: 80%;
-  }
-  #hero .btn-get-started {
-    font-size: 16px;
-    margin-top: -15cm;
-    padding: 10px 24px 11px 24px;
-  }
-}
-
-@-webkit-keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes up-down {
-  0% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(-10px);
-  }
-}
 
 /*--------------------------------------------------------------
 # cekPenipuan
@@ -395,7 +328,6 @@ input[type='file'] {
   width: 100%;
   height: 60vh;
   padding: 10px 0px 50px 0px;
-  background-color: #fff; 
 }
 
 #cekPenipuan .wave-home-front{
@@ -406,7 +338,6 @@ input[type='file'] {
 }
 
 .cekPenipuan .cekPenipuan-input{
-  background: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
   z-index: 2;
@@ -1212,6 +1143,11 @@ input[type='file'] {
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
 }
 
+.bc-transparent{
+  background-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+}
+
 .bc-gray-light{
   background-color: #fff !important;
 }
@@ -1232,11 +1168,17 @@ input[type='file'] {
   border-color: #ffb300;
   object-fit: cover;
 }
+.bc-image2{
+  background: url('../img/wave.png');
+  object-fit: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .bc-shadow{
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
 }
 .bc-facebook{
-  background-color:#1976d2;
+  background-color:#595a5b;
   color: #fff;
 }
 .bc-youtube{
@@ -1443,7 +1385,7 @@ input[type='file'] {
   transition: 0.3s;
 }
 
-.btn-cs-blue-outline:hover {
+.btn-cs-blue-outline:hover, .btn-cs-blue-outline:focus {
   background: #2196f3 !important;
   color: #fff !important;
   transition: 0.3s;
@@ -1491,237 +1433,97 @@ input[type='file'] {
 /*--------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
+@media (max-width: 980px) {
+  .nav-img{
+    width: 150px;
+  }
+  .nav-right{
+    margin-left: 50%;
+  }
+  #hero {
+    height: 45vh;
+  }
+  #hero .hero-img {
+    text-align: center;
+  }
+  #hero .hero-img img {
+    width: 50%;
+  }
+}
 
-@media (max-width: 768px) {
-  button, .faq-btn label{
-    font-size: 12px;
-    font-weight: 600;
+/* @media (max-width: 768px) {
+  #hero h1 {
+    font-size: 28px;
+    line-height: 36px;
+  }
+  #hero h2 {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 30px;
+  }
+  #hero .hero-img img {
+    width: 70%;
+  }
+} */
+
+@media (max-width: 560px) {
+  .nav-img{
+    width: 140px;
+  }
+  .nav-right{
+    margin-left: 35%;
+  }
+  #hero{
+    height: 40vh;
+  }
+  #hero h1{
+    padding: 20px 10px 0px 10px;
+  }
+  #hero h2{
+    padding: 0px 10px 0px 10px;
+  }
+  #hero .hero-img img {
+    width: 80%;
   }
   #hero .btn-get-started {
-    font-weight: 600;
-    font-size: 12px;
-    padding: 8px 20px 8px 20px;
-    
-  }
-  .contact .php-email-form button[type="submit"] {
-    background: #47b2e4;
-    border: 0;
-    padding: 8px 34px;
-    color: #fff;
-    transition: 0.4s;
-    border-radius: 10px;
-  }
-  
-  .portfolio-details .portfolio-description h2 {
-    width: 100%;
-  }
-  .portfolio-details .portfolio-info {
-    position: static;
-    margin-top: 30px;
-  }
-  .portfolio-details .portfolio-description h2 {
-    width: 100%;
-  }
-  .portfolio-details .portfolio-info {
-    position: static;
-    margin-top: 30px;
-  }
-  .cta .cta-btn-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  .pricing .box {
-    max-width: 80%;
-    margin: 0 auto 30px auto;
-  }
-  .section-title h2 {
-    font-size: 24px;
-  }  
-  .get-login-btn{
-    margin: 0 5px 0 0;
-    padding: 5px 15px 5px 15px;
-  }
-  .get-register-btn{
-    margin: 0 40px 0 0;
-    padding: 5px 15px 5px 15px;
-  }
-  #header .logo {
-    font-size: 30px;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  #header .logo a {
-    color: #42a5f5;
-    font-weight: bold;
-    padding-left: 10px;
-  }  
-  #header .logo img {
-    max-height: 40px;
-  }
-  .get-send-btn, .get-cancel-btn{
-    margin-top: 10px ;
-    margin-left: 0;
-    width: 100% !important;
-    text-align: center;
-  }
-  .cta .cta-btn-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  .why-us .img {
-    min-height: 100px;
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-  }
-  #footer .footer-bottom {
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  #footer .copyright, #footer .credits {
-    text-align: center;
-    float: none;
-  }
-  #footer .credits {
-    padding-top: 4px;
-  }
-
-}
-
-@media (max-width: 1024px) {
-  .why-us .content, .why-us .accordion-list {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .cta {
-    background-attachment: scroll;
-  }
-  .notifBox{
-    width: 400px;  
-    left: -300px;
-  }
-  .loginBox{
-    width: 180px;  
-    left: -120px;
-  }
-}
-
-@media (max-width: 992px) {
-  .breadcrumbs {
-    padding: 10px 0px 5px 0;
-    min-height: 40px;
-    margin-top: 80px;
-  }
-  
-  .breadcrumbs h2 {
-    font-size: 30px;
-    font-weight: 600;
-    color: #37517e;
-  }
-  
-  .breadcrumbs ol {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0 0 10px 0;    
-    margin: 0;
-    font-size: 10px;
-  }
-  .why-us .img {
-    min-height: 400px;
-  }
-  .why-us .content {
-    padding-top: 30px;
-  }
-  .why-us .accordion-list {
-    padding-bottom: 30px;
-  }
-  .pricing .box {
-    max-width: 60%;
-    margin: 0 auto 30px auto;
-  }
-  .hasilPenipuan-container .detailbar .db-c{
-    border-width: medium;
-    border-left: 0px solid #d2d2d2;
-    border-right: 0px solid #d2d2d2;
-    border-top: 0px solid #d2d2d2;
-    border-bottom: 0px solid #d2d2d2;
-  }
-  .laporan-pengguna h2{
-    font-size: 14px;
-    font-weight: 400;
-    float:left;
-    padding-top: 5px;
-    padding-left: 2px;
-  }
-  .laporan-pengguna .rating-review{
-    padding-top: 2px;
-    color: #ffeb3b;
-  }
-
-  .cekPenipuan .php-email-form button[type="submit"]{
-    margin-top: 0;
-    font-size: 12px;
-    padding: 5px 10px 5px 10px !important;
-  }
-
-  .diskusi-btn, .review-btn, .lapor-btn{
-    margin-bottom: 10px;
-  }
-}
-
-@media (max-width: 446px) {
-  .login-icon{
-    margin-right: 60px;
     font-size: 16px;
+    margin-top: -15cm;
+    padding: 10px 24px 11px 24px;
   }
-  .login-icon .drop-down ul{
-    left: -100px;
+  .cekPenipuan h2{
+    padding-left: 10px;
   }
 
-  .notifBox{
-    width: 220px;  
-    left: -300px;
-  }
-  .loginBox{
-    width: 130px;  
-    right: 10px;
-  }
-  .login-icon .drop-down ul a{
-    font-size: 10px;
-  }
-  .pricing .box {
-    max-width: 100%;
-    margin: 0 auto 30px auto;
-  }
-  #header .logo a {
-    color: #42a5f5;
-    font-weight: bold;
-    padding-left: 10px;
-  }  
-  #header .logo {
-    font-size: 24px;
-    margin: 0;
-    padding: 0;
-    line-height: 1;
-    font-weight: 500;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-  }
-  #header .logo img {
-    max-height: 40px;
-  }
-  
 }
 
-@media (max-width: 1200px) {
-  .faq .faq-list {
-    padding: 0;
+@media (max-width: 415px) {
+  .nav-img{
+    width: 100px;
+  }
+  .nav-right{
+    margin-left: 18%;
+  }
+  .notif-dropdown .notif-icon{
+    font-size: 16px !important;
+  }
+  .profil-dropdown img{
+    padding: 0px;
+    width: 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .nav-img{
+    width: 100px;
+  }
+  .nav-right{
+    margin-left: 8%;
+  }
+  .notif-dropdown .notif-icon{
+    font-size: 16px !important;
+  }
+  .profil-dropdown img{
+    padding: 0px;
+    width: 30px;
   }
 }
