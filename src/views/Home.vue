@@ -26,7 +26,7 @@
             <h2 class="fs-35 m-b-20">Cek Penipuan</h2>
             <div class="cekPenipuan-input bc-transparent p-10">
                 <h4 class="text-center fs-16 m-t-10 m-b-20">Silahkan Pilih Kategori</h4>
-                <div class="container cekPenipuan-form text-center">
+                <div class="container text-center">
                   <b-tabs 
                     pills 
                     content-class="m-t-13 "

@@ -1512,7 +1512,7 @@ input[type='file'] {
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 375px) {
   .nav-img{
     width: 100px;
   }
@@ -1525,5 +1525,19 @@ input[type='file'] {
   .profil-dropdown img{
     padding: 0px;
     width: 30px;
+  }
+  #hero{
+    height: 50vh;
+  }
+  #hero h1{
+    font-size: 40px;
+    line-height: 45px;
+  }
+  #hero h2{
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .cekPenipuan h2{
+    font-size: 25px;
   }
 }
