@@ -1485,10 +1485,12 @@ input[type='file'] {
     margin-top: -15cm;
     padding: 10px 24px 11px 24px;
   }
-  .cekPenipuan h2{
-    padding-left: 10px;
+  .cekPenipuan{
+    margin-top: 50px;
   }
-
+  .cekPenipuan .cekPenipuan-input{
+    padding: 10px;
+  }
 }
 
 @media (max-width: 415px) {
@@ -1520,6 +1522,9 @@ input[type='file'] {
   .cekPenipuan{
     margin-top: 50px;
   }
+  .cekPenipuan .cekPenipuan-input{
+    padding: 10px;
+  }
 }
 
 @media (max-width: 375px) {
@@ -1537,7 +1542,7 @@ input[type='file'] {
     width: 30px;
   }
   #hero{
-    padding: 100px 0px 150px 0px;
+    padding: 100px 0px 100px 0px;
   }
   #hero h1{
     font-size: 40px;
@@ -1549,7 +1554,7 @@ input[type='file'] {
     font-weight: 400;
   }
   .cekPenipuan{
-    margin-top: 50px;
+    margin-top: 0px;
   }
   .cekPenipuan .cekPenipuan-title{
     font-size: 25px;
@@ -1558,42 +1563,7 @@ input[type='file'] {
     padding: 10px;
   }
 }
-@media (max-width: 375px) {
-  .nav-img{
-    width: 100px;
-  }
-  .nav-right{
-    margin-left: 20%;
-  }
-  .notif-dropdown .notif-icon{
-    font-size: 16px !important;
-  }
-  .profil-dropdown img{
-    padding: 0px;
-    width: 30px;
-  }
-  #hero{
-    padding: 100px 0px 150px 0px;
-  }
-  #hero h1{
-    font-size: 40px;
-    line-height: 45px;
-  }
-  #hero h2{
-    font-size: 20px;
-    line-height: 25px;
-    font-weight: 400;
-  }
-  .cekPenipuan{
-    margin-top: 50px;
-  }
-  .cekPenipuan .cekPenipuan-title{
-    font-size: 25px;
-  }
-  .cekPenipuan .cekPenipuan-input{
-    padding: 10px;
-  }
-}
+
 
 @media (max-height: 640px), (max-height: 731px) {
   .nav-right{
