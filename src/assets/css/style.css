@@ -439,6 +439,8 @@ input[type='file'] {
   margin-left: auto;
   margin-right: auto;
   background-color: rgba(255, 255, 255, 0.5);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .boxed-input span{
@@ -1459,6 +1461,11 @@ input[type='file'] {
   #hero {
     padding: 100px 0px 150px 0px;
   }
+  .cekPenipuan-page .boxed-input, .boxed-form{
+    padding: 10px;
+    width: 100%;
+
+  }
 }
 
 @media (max-width: 575px) {
@@ -1487,14 +1494,13 @@ input[type='file'] {
   }
   .cekPenipuan h2{
     padding-left: 10px;
-    background-color: #128C7E !important;
   }
   .cekPenipuan .cekPenipuan-input{
     padding: 10px;
   }
 }
 
-@media (max-width: 415px) {
+@media (max-width: 415px) { /*myphone*/
   .nav-img{
     width: 100px;
   }
@@ -1521,7 +1527,7 @@ input[type='file'] {
     font-weight: 400;
   }
   .cekPenipuan{
-    margin-top: 50px;
+    margin-top: 0px;
   }
   .cekPenipuan h2{
     padding-left: 10px;
@@ -1529,6 +1535,11 @@ input[type='file'] {
   }
   .cekPenipuan .cekPenipuan-input{
     padding: 10px;
+  }
+  .cekPenipuan-page .boxed-input, .boxed-form{
+    padding: 10px;
+    width: 100%;
+
   }
 }
 
@@ -1563,7 +1574,6 @@ input[type='file'] {
   }
   .cekPenipuan h2{
     padding-left: 10px;
-    background-color: #8c8a12 !important;
     font-size: 25px;
   }
   .cekPenipuan .cekPenipuan-input{
@@ -1600,7 +1610,6 @@ input[type='file'] {
   }
   .cekPenipuan h2{
     padding-left: 10px;
-    background-color: #3d128c !important;
     font-size: 25px;
   }
 }

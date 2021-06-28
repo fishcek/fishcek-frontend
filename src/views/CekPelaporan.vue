@@ -7,7 +7,7 @@
                     <div class="boxed bc-image1 text-center">
                         <div class="container">
                             <h2>Cek {{type}} Penipu Online</h2>
-                            <div class="boxed-input p-20 bc-blur">
+                            <div class="boxed-input bc-blur">
                                 <input type="number" class="form-control" ref="pencarian" v-model="pencarianPenipuan" :placeholder="textPlaceholder">
                                 <span class="text-error">{{txterror}}</span>
                                 <p>Contoh : <span class="highlight"> {{noContoh}} </span></p>

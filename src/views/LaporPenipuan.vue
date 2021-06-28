@@ -143,7 +143,6 @@
                                         id="file"
                                         ></b-form-file>
                                     </b-form-group>
-                                    {{lampiran}}
                                     <div class="text-center">
                                         <b-button type="submit" class="btn-cs btn-cs-blue m-t-5 m-r-10 ">Submit</b-button>
                                         <b-button type="reset" class="btn-cs btn-cs-red m-t-5 ">Reset</b-button>
