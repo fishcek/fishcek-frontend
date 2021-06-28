@@ -1431,7 +1431,7 @@ input[type='file'] {
 /*--------------------------------------------------------------
 # Responsive
 --------------------------------------------------------------*/
-@media (max-width: 980px) {
+@media (max-width: 991px) {
   .nav-img{
     width: 150px;
   }
@@ -1449,22 +1449,19 @@ input[type='file'] {
   }
 }
 
-/* @media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+@media (max-width: 768px) {
+  .nav-img{
+    width: 150px;
   }
-  #hero h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
+  .nav-right{
+    margin-left: 20%;
   }
-  #hero .hero-img img {
-    width: 70%;
+  #hero {
+    padding: 100px 0px 150px 0px;
   }
-} */
+}
 
-@media (max-width: 560px) {
+@media (max-width: 575px) {
   .nav-img{
     width: 140px;
   }
@@ -1472,7 +1469,7 @@ input[type='file'] {
     margin-left: 35%;
   }
   #hero{
-    height: 40vh;
+    padding: 100px 0px 150px 0px;
   }
   #hero h1{
     padding: 20px 10px 0px 10px;
@@ -1507,6 +1504,21 @@ input[type='file'] {
   .profil-dropdown img{
     padding: 0px;
     width: 30px;
+  }
+  #hero{
+    padding: 100px 0px 150px 0px;
+  }
+  #hero h1{
+    font-size: 40px;
+    line-height: 45px;
+  }
+  #hero h2{
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+  }
+  .cekPenipuan{
+    margin-top: 50px;
   }
 }
 
@@ -1546,10 +1558,12 @@ input[type='file'] {
     padding: 10px;
   }
 }
-
-@media (max-width: 360px) {
+@media (max-width: 375px) {
+  .nav-img{
+    width: 100px;
+  }
   .nav-right{
-    margin-left: 7%;
+    margin-left: 20%;
   }
   .notif-dropdown .notif-icon{
     font-size: 16px !important;
@@ -1559,23 +1573,25 @@ input[type='file'] {
     width: 30px;
   }
   #hero{
-    padding: 70px 0px 0px 0px;
+    padding: 100px 0px 150px 0px;
   }
   #hero h1{
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 40px;
+    line-height: 45px;
   }
   #hero h2{
-    font-size: 15px;
-    line-height: 20px;
+    font-size: 20px;
+    line-height: 25px;
     font-weight: 400;
   }
   .cekPenipuan{
-    margin-top: 60px;
+    margin-top: 50px;
   }
   .cekPenipuan .cekPenipuan-title{
     font-size: 25px;
-    padding-bottom: 5px;
+  }
+  .cekPenipuan .cekPenipuan-input{
+    padding: 10px;
   }
 }
 
