@@ -13,7 +13,7 @@
                                 <strong>Email :</strong> info@example.com<br>  
                             </p>                         
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-links">
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-links m-b-10">
                             <h5>Link</h5>
                             <a href="#">Home</a>
                             <a href="#">About us</a>
@@ -21,7 +21,7 @@
                             <a href="#">Terms of service</a>
                             <a href="#">Privacy policy</a>                            
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-links">
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-links m-b-10">
                             <h5>Layanan Kami</h5>
                             <a href="#">Home</a>
                             <a href="#">About us</a>
@@ -29,7 +29,7 @@
                             <a href="#">Terms of service</a>
                             <a href="#">Privacy policy</a>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-12 footer-links">
+                        <div class="col-lg-3 col-md-6 col-sm-12 footer-links m-b-10">
                             <h5>Sosial Media</h5>
                             <p>Memberikan berita dan informasi terkini di dunia perikanan</p>                            
                             <div class="social-links mt-3">

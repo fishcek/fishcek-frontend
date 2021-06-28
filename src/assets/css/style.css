@@ -293,8 +293,8 @@ input[type='file'] {
 } */
 #hero {
   width: auto;
-  height: 65vh;
-  padding: 100px 0px 0px 0px;
+  height: auto;
+  padding: 170px 0px 70px 0px;
 }
 
 #hero .container {
@@ -306,7 +306,6 @@ input[type='file'] {
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
-  padding-top: 70px;
   color: #212121;
 }
 
@@ -324,17 +323,15 @@ input[type='file'] {
 /*--------------------------------------------------------------
 # cekPenipuan
 --------------------------------------------------------------*/
-#cekPenipuan {
+.cekPenipuan {
   width: 100%;
-  height: 60vh;
-  padding: 10px 0px 50px 0px;
+  height: auto;
+  padding: 0px 0px 50px 0px;
 }
 
-#cekPenipuan .wave-home-front{
-  position: relative;
-  bottom: 128px;
-  width: 100%;
-  z-index: 1;
+.cekPenipuan .cekPenipuan-title{
+  font-size: 30px;
+  padding-bottom: 10px;
 }
 
 .cekPenipuan .cekPenipuan-input{
@@ -342,6 +339,7 @@ input[type='file'] {
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
   z-index: 2;
   position: relative;
+  padding: 10px 90px 10px 90px;
 }
 
 .cekPenipuan .cekPenipuan-form {
@@ -1517,7 +1515,7 @@ input[type='file'] {
     width: 100px;
   }
   .nav-right{
-    margin-left: 8%;
+    margin-left: 20%;
   }
   .notif-dropdown .notif-icon{
     font-size: 16px !important;
@@ -1527,7 +1525,7 @@ input[type='file'] {
     width: 30px;
   }
   #hero{
-    height: 50vh;
+    padding: 100px 0px 150px 0px;
   }
   #hero h1{
     font-size: 40px;
@@ -1536,8 +1534,75 @@ input[type='file'] {
   #hero h2{
     font-size: 20px;
     line-height: 25px;
+    font-weight: 400;
   }
-  .cekPenipuan h2{
+  .cekPenipuan{
+    margin-top: 50px;
+  }
+  .cekPenipuan .cekPenipuan-title{
     font-size: 25px;
+  }
+  .cekPenipuan .cekPenipuan-input{
+    padding: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .nav-right{
+    margin-left: 7%;
+  }
+  .notif-dropdown .notif-icon{
+    font-size: 16px !important;
+  }
+  .profil-dropdown img{
+    padding: 0px;
+    width: 30px;
+  }
+  #hero{
+    padding: 70px 0px 0px 0px;
+  }
+  #hero h1{
+    font-size: 30px;
+    line-height: 35px;
+  }
+  #hero h2{
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .cekPenipuan{
+    margin-top: 60px;
+  }
+  .cekPenipuan .cekPenipuan-title{
+    font-size: 25px;
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-height: 640px), (max-height: 731px) {
+  .nav-right{
+    margin-left: 15%;
+  }
+  .notif-dropdown .notif-icon{
+    font-size: 16px !important;
+  }
+  .profil-dropdown img{
+    padding: 0px;
+    width: 30px;
+  }
+  #hero{
+    padding: 70px 0px 0px 0px;
+  }
+  #hero h1{
+    font-size: 30px;
+    line-height: 35px;
+  }
+  #hero h2{
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .cekPenipuan{
+    margin-top: 20px;
   }
 }
