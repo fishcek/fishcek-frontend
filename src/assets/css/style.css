@@ -711,6 +711,30 @@ input[type='file'] {
 }
 
 /*--------------------------------------------------------------
+# Artikel
+--------------------------------------------------------------*/
+.artikel {
+  width: 100%;
+  height: auto;
+  padding: 0px 0px 50px 0px;
+  background-color: #005cb2;
+}
+
+.artikel .artikel-title{
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.artikel-page{
+  width: 100% !important;  
+  border-radius: 10px;
+}
+
+.artikel-page .boxed{
+  padding: 10px;  
+}
+
+
+/*--------------------------------------------------------------
 # Login-register page
 --------------------------------------------------------------*/
 .limiter {

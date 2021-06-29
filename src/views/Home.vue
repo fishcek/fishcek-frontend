@@ -2,6 +2,7 @@
   <div class="home">
     <Navbar/>
     <div class="bc-image2">
+      
       <section id="hero" class="">     
         <div class="d-flex">
           <div class="container">
@@ -19,12 +20,12 @@
             </div>
           </div>
         </div>
-      </section><!-- End Hero -->
+      </section>
 
       <section id="cekPenipuan" class="cekPenipuan">
         <div class="container" data-aos="fade-up">
             <h2 class="cekPenipuan-title">Cek Penipuan</h2>
-            <div class="cekPenipuan-input bc-transparent">
+            <div class="cekPenipuan-input bc-blur">
                 <h4 class="text-center fs-16 m-t-10 m-b-20">Silahkan Pilih Kategori</h4>
                 <div class="container text-center">
                   <b-tabs 
@@ -46,6 +47,16 @@
         </div>
       </section>
     </div>
+      <section id="artikel" class="artikel">
+        <div class="container" data-aos="fade-up">
+            <h2 class="artikel-title">Artikel</h2>
+            <div class="artikel-page bc-blur">
+                <div class="boxed">
+                  <h2 class="artikel-title">Artikel</h2>
+                </div>
+            </div>
+        </div>
+      </section>
     <Footer/>
   </div>
 </template>
