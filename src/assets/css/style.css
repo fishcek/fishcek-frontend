@@ -39,6 +39,10 @@ textarea {
   overflow-y: auto !important;
 }
 
+hr.dashed{
+  margin-top: 5px;
+  border-top: 1px dashed #999999;
+}
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -262,24 +266,25 @@ input[type='file'] {
 
 .nav-vertical{
   margin-top: 20px;
-  border-top: 1px dashed  #999999 !important;
 }
+
 
 .nav-vertical li a{  
   color: #212121 !important;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
 }
 
 .nav-vertical .collapse-menu li a{  
   color: #000 !important;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
   padding-left: 30px;
 }
 
 .nav-vertical .collapse-menu li a:hover, .nav-vertical li a:hover, .nav .router-link-active, .bg-focus{  
-  background-color: rgba(229, 229, 229, 0.5) 
+  
+  background-color: #e5e5e5;
 }
 
 
@@ -934,9 +939,17 @@ input[type='file'] {
 /*--------------------------------------------------------------
 # Profil
 --------------------------------------------------------------*/
+.userProfil{
+  background-color: #e5e5e5 !important;
+}
 
-.profil .profil-left .profil-photo{
-  width: 220px;
+.userProfil .userProfil-left{
+  padding: 10px;
+  background-color: #005cb2 !important;
+}
+
+.userProfil .userProfil-left .userProfil-photo{
+  width: 100%;
 }
 /*--------------------------------------------------------------
 # Footer

@@ -12,8 +12,8 @@
                   
                   <b-nav-item href="#" class="text-dark"><router-link to="/home">Beranda</router-link></b-nav-item>
                   <b-nav-item-dropdown text="Cek Penipuan" variant="primary" no-caret>
-                    <b-dropdown-item to="/cekpelaporan/notelepon" replace>Telepon</b-dropdown-item>
-                    <b-dropdown-item to="/cekpelaporan/norekening" replace>Rekening</b-dropdown-item>
+                    <b-dropdown-item to="/cekpelaporan/notelepon">Telepon</b-dropdown-item>
+                    <b-dropdown-item to="/cekpelaporan/norekening">Rekening</b-dropdown-item>
                   </b-nav-item-dropdown>                  
 
                   <b-nav-item href="#" class="text-dark"><router-link to="/rekan">RekAn</router-link></b-nav-item>
@@ -102,7 +102,7 @@ export default {
       this.$refs.dropdown.visible = false;
     },
     goHome(){
-      this.$router.push('/home');
+      this.$router.push('/');
     }
   },
   

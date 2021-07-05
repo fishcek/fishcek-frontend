@@ -20,19 +20,26 @@
                 </div>
                 <div class="p-3">
                   <nav class="mb-3">
-                    <b-nav vertical class="nav-vertical">
-                      <b-nav-item to="/profil" @click="hide, onFocus('c')">Profil</b-nav-item>
-                      <b-nav-item v-b-toggle.collapse-a id="bcollapse-a" @click="onFocus('a')">Laporkan Penipuan</b-nav-item>                     
-                      <b-collapse id="collapse-a" class="collapse-menu" >
-                        <b-nav-item to="/lapor/notelepon" replace @click="hide">Nomor Telepon</b-nav-item>
-                        <b-nav-item to="/lapor/norekening" replace @click="hide">Nomor Rekening</b-nav-item>
-                      </b-collapse>
-                      <b-nav-item v-b-toggle.collapse-b id="bcollapse-b" @click="onFocus('b')">Laporan Saya</b-nav-item>                     
-                      <b-collapse id="collapse-b" class="collapse-menu">
-                        <b-nav-item to="/myreport/notelepon" replace @click="hide, onFocus('c')">Nomor Telepon</b-nav-item>
-                        <b-nav-item to="/myreport/norekening" replace @click="hide, onFocus('c')">Nomor Rekening</b-nav-item>
-                      </b-collapse>
-                      <b-nav-item to="/myartikel" @click="hide">Artikel Saya</b-nav-item>
+                    <b-nav vertical>
+                      <div class="nav-vertical">
+                        <span class="text-muted fs-12">Layanan</span>
+                        <hr class="dashed">
+                        <b-nav-item v-b-toggle.collapse-a id="bcollapse-a" @click="onFocus('a')">Laporkan Penipuan</b-nav-item>                     
+                        <b-collapse id="collapse-a" class="collapse-menu" >
+                          <b-nav-item to="/lapor/notelepon" @click="hide">Nomor Telepon</b-nav-item>
+                          <b-nav-item to="/lapor/norekening" @click="hide">Nomor Rekening</b-nav-item>
+                        </b-collapse>
+                        <b-nav-item v-b-toggle.collapse-b id="bcollapse-b" @click="onFocus('b')">Laporan Saya</b-nav-item>                     
+                        <b-collapse id="collapse-b" class="collapse-menu">
+                          <b-nav-item to="/myreport/notelepon" @click="hide, onFocus('c')">Nomor Telepon</b-nav-item>
+                          <b-nav-item to="/myreport/norekening" @click="hide, onFocus('c')">Nomor Rekening</b-nav-item>
+                        </b-collapse>
+                        <br>
+                        <span class="text-muted fs-12">Member</span>
+                        <hr class="dashed">
+                        <b-nav-item to="/profil" @click="hide, onFocus('c')">Profil</b-nav-item>
+                        <b-nav-item to="/myartikel" @click="hide">Artikel Saya</b-nav-item>
+                      </div>
                     </b-nav>
                   </nav>
                 </div>

@@ -1,28 +1,39 @@
 <template>
-  <div class="profil">
+  <div>
     <Sidebar/>
-    <div class="container m-t-50">
-        <div class="profil">
+    <div class="bc-image2">
+        <div class="userProfil container m-t-70">
+                <h3 class="m-b-20 p-t-10">Profil</h3>
             <div class="row">
-            <h3 class="m-b-20 m-t-40">Profil</h3>
-                <div class="col-lg-3 col-md-12">
-                    <div class="profil-left">
-                        <img src="../assets/img/logo-1080p-square.jpg" class="rounded mx-auto d-block profil-photo">
+                <div class="col-lg-3">
+                    <div class="userProfil-left">
+                        <img src="../assets/img/logo-1080p-square.jpg" class="rounded mx-auto userProfil-photo">
                         <b-form-file v-model="fotoProfil" id="selectedFile" class="mt-3" ref="inputFile" style="display: none;"></b-form-file>
-                        <input type="button" value="Ubah Foto" class="btn-cs mx-auto d-block m-t-10 btn-cs-long-md btn-cs-blue" onclick="document.getElementById('selectedFile').click();" />
                         <p class="text-center">{{fotoProfil ? fotoProfil.name : ''}}</p>
+                        <input type="button" value="Ubah Foto" class="btn-cs mx-auto d-block m-t-10 btn-cs-long-md btn-cs-blue" onclick="document.getElementById('selectedFile').click();" />
                     </div>
                 </div>
-                <div class="col-lg-9 col-md-12" style="padding:10px 20px;">
-                    <div class="col-lg-6 col-md-6 col-sm-12">
-                        <b-form-group
-                            label="Nama"
-                            label-for="nested-street"
-                            label-cols-sm="3"
-                            label-align-sm="right"
-                        >
-                            <b-form-input v-model="user.name" type="text"></b-form-input>
-                        </b-form-group>
+                <div class="col-lg-9">
+                    <div class="userProfil-right">
+                        <div class="form-group">
+                            <label for="input-live">Nama</label>
+                            <b-form-input id="input-live" type="text" v-model="user.name" trim></b-form-input>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-live">Tanggal Lahir</label>
+                            <b-form-input id="input-live" type="text" v-model="user.name" trim></b-form-input>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-live">Jenis Kelamin</label>
+                            <b-form-input id="input-live" type="text" v-model="user.name" trim></b-form-input>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="input-live">Nomor HP</label>
+                            <b-form-input id="input-live" type="number" v-model="user.name" trim></b-form-input>
+                        </div>
 
                         <div v-if="emailStatus">
                             <b-form-group
@@ -47,6 +58,30 @@
                             </b-input-group>
                                 <span class="text-danger fs-12">Verfikasi Email Sekarang</span> 
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <Footer/>
+    
+            <!-- <div class="row">
+                <div class="col-lg-3 col-md-12">
+                    <div class="profil-left">
+                        <img src="../assets/img/logo-1080p-square.jpg" class="rounded mx-auto profil-photo">
+                    </div>
+                </div>
+                <div class="col-lg-9 col-md-12">
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <b-form-group
+                            label="Nama"
+                            label-for="nested-street"
+                            label-cols-sm="3"
+                            label-align-sm="right"
+                        >
+                            <b-form-input v-model="user.name" type="text"></b-form-input>
+                        </b-form-group>
+
 
                     </div>
                     <div class="text-center m-t-20">
@@ -55,10 +90,8 @@
                         <span class="btn-cs btn-cs-green" @click="simpan()">Simpan</span>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <Footer/>
+            </div> -->
+        
   </div>
 </template>
 

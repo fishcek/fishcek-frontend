@@ -875,5 +875,7 @@ export default {
     created(){
         this.go()
     }
+
+    
 }
 </script>
