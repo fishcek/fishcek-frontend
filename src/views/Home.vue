@@ -57,6 +57,51 @@
             </div>
         </div>
       </section>
+      <section id="faq" class="faq">
+        <div class="container" data-aos="fade-up">
+            <h2 class="faq-title">FAQ</h2>
+            <div class="faq-page bc-blur">
+                <div class="boxed">
+
+                  <div class="accordion" role="tablist">
+                    <b-card no-body class="mb-1">
+                      <b-card-header header-tag="header" class="p-1" role="tab">
+                        <button class="faq-title" v-b-toggle.accordion-1>FAQ 1</button>
+                      </b-card-header>
+                      <b-collapse id="accordion-1" visible accordion="my-accordion" role="tabpanel">
+                        <b-card-body>
+                          <b-card-text>{{ text }}</b-card-text>
+                        </b-card-body>
+                      </b-collapse>
+                    </b-card>
+
+                    <b-card no-body class="mb-1">
+                      <b-card-header header-tag="header" class="p-1" role="tab">
+                        <button class="faq-title" v-b-toggle.accordion-2>FAQ 2</button>
+                      </b-card-header>
+                      <b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
+                        <b-card-body>
+                          <b-card-text>{{ text }}</b-card-text>
+                        </b-card-body>
+                      </b-collapse>
+                    </b-card>
+
+                    <b-card no-body class="mb-1">
+                      <b-card-header header-tag="header" class="p-1" role="tab">
+                        <button class="faq-title" v-b-toggle.accordion-3>FAQ 3</button>
+                      </b-card-header>
+                      <b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
+                        <b-card-body>
+                          <b-card-text>{{ text }}</b-card-text>
+                        </b-card-body>
+                      </b-collapse>
+                    </b-card>
+                  </div>
+
+                </div>
+            </div>
+        </div>
+      </section>
     <Footer/>
   </div>
 </template>
@@ -75,7 +120,8 @@ export default {
     pencarianPenipuan:'',
     tabIndex:0,
     textPlaceholder:'Pencarian No Rekening',
-    txterror:''
+    txterror:'',
+    text:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis saepe ex sequi temporibus blanditiis quis magni, eos corporis neque, maxime amet. Provident repellendus architecto hic repellat soluta sunt consectetur facilis quia quasi reprehenderit modi fuga unde suscipit quod, atque pariatur sequi necessitatibus totam distinctio libero vitae explicabo. Iure quam porro alias deserunt quidem nesciunt voluptate, cupiditate qui molestiae ipsum at tempora tenetur vero distinctio dolorum maiores voluptas inventore, hic non, corrupti consequatur praesentium optio est. Vitae, laudantium similique! Modi deleniti unde placeat, velit, illum esse, id dolore sit ipsam molestiae suscipit at facilis repellendus amet vero ea eos cumque omnis!'
   }),
   methods:{
     pencarianClear(){

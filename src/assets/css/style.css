@@ -462,7 +462,8 @@ input[type='file'] {
 #hero {
   width: auto;
   height: auto;
-  padding: 100px 0px 70px 0px;
+  padding: 100px 0px 20px 0px;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 #hero .container {
@@ -472,15 +473,15 @@ input[type='file'] {
 #hero h1 {
   margin: 0 0 10px 0;
   font-size: 48px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 56px;
   color: #212121;
 }
 
 #hero h2 {
   color:#202020;
-  margin-bottom: 50px;
   font-size: 24px;
+  font-weight: 300;
 }
 
 #hero a {
@@ -498,7 +499,7 @@ input[type='file'] {
 }
 
 .cekPenipuan .cekPenipuan-title{
-  font-size: 30px;
+  font-size: 25px;
   padding-bottom: 10px;
 }
 
@@ -889,7 +890,7 @@ input[type='file'] {
 }
 
 .artikel .artikel-title{
-  font-size: 30px;
+  font-size: 25px;
   padding-bottom: 10px;
 }
 .artikel-page{
@@ -901,6 +902,67 @@ input[type='file'] {
   padding: 10px;  
 }
 
+/*--------------------------------------------------------------
+# FAQ
+--------------------------------------------------------------*/
+.faq {
+  width: 100%;
+  height: auto;
+  padding: 0px 0px 50px 0px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.faq .faq-title{
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+.faq-page{
+  width: 100% !important;  
+  border-radius: 10px;
+}
+
+.faq-page .boxed{
+  padding: 10px;  
+}
+
+.accordion{
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+}
+
+.accordion header{
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  color: #000;
+  border: none;
+}
+
+.accordion .faq-title{  
+  background-color: rgba(0, 0, 0, 0);
+  color: #000;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 0px;
+  border:none;
+}
+
+.accordion .faq-title:hover, .accordion .faq-title:focus{
+  color: #2196f3;
+}
+
+.accordion .card{
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+
+.accordion .card-body{
+  background-color: rgba(0, 0, 0, 0);
+  color: #000;
+  padding: 0px 10px;
+  font-size: 16px;
+  text-align: justify;
+}
 
 /*--------------------------------------------------------------
 # Login-register page
