@@ -885,8 +885,7 @@ input[type='file'] {
 .artikel {
   width: 100%;
   height: auto;
-  padding: 0px 0px 50px 0px;
-  background-color: rgba(0, 0, 0, 0.1);
+  padding: 20px 0px 50px 0px;
 }
 
 .artikel .artikel-title{
@@ -909,7 +908,6 @@ input[type='file'] {
   width: 100%;
   height: auto;
   padding: 0px 0px 50px 0px;
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .faq .faq-title{
