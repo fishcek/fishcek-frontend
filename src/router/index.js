@@ -109,30 +109,30 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-  if(to.matched.some(record => record.meta.requiresAuth)) {
-      if (localStorage.getItem('fishcek') == null) {
-          next({
-              path: '/login',
-              params: { nextUrl: to.fullPath }
-          })
-      } else {
+    if(to.matched.some(record => record.meta.requiresAuth)) {
+        if (localStorage.getItem('fishcek') == null) {
+            next({
+                path: '/login',
+                params: { nextUrl: to.fullPath }
+            })
+        } else {
+          next()
+        }
+    }else {
         next()
-      }
-  }else {
-      next()
-  }
-  let namePage=''
-  if (to.name=='Home'||to.name=='Beranda') {
-    namePage=`Situs Pelaporan Penipuan Dunia Perikanan | ${process.env.VUE_APP_TITLE}`
-  }else if(to.name=='Page Not Found'){
-    namePage=`${to.name}`
-  }
-  else{
-    namePage=`${process.env.VUE_APP_TITLE} | ${to.name}`
-  }
-  document.title=namePage
-  console.log(namePage)
-  next()
-})
+    }
+    let namePage=''
+    if (to.name=='Home'||to.name=='Beranda') {
+      namePage=`Situs Pelaporan Penipuan Dunia Perikanan | ${process.env.VUE_APP_TITLE}`
+    }else if(to.name=='Page Not Found'){
+      namePage=`${to.name}`
+    }
+    else{
+      namePage=`${process.env.VUE_APP_TITLE} | ${to.name}`
+    }
+    document.title=namePage
+    console.log(namePage)
+    next()
+  })
 
 export default router

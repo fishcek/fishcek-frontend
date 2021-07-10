@@ -17,13 +17,13 @@
                 <form @submit.prevent="login()" ref="form">
                   <div class="wrap-input-form" data-validate = "Valid email is required: ex@abc.xyz">
                     <div class="form-group">
-                      <input type="email" class="form-control" name="email" placeholder="Email" v-model="email">
+                      <input type="email" class="form-control" name="email" placeholder="Email" required v-model="email">
                     </div>
                   </div>
                   
                   <div class="wrap-input-form" data-validate = "Valid email is required: ex@abc.xyz">
                     <div class="form-group">
-                      <input type="password" class="form-control" name="pass" placeholder="Password" v-model="password">
+                      <input type="password" class="form-control" name="pass" placeholder="Password" required v-model="password">
                     </div>
                   </div>
                   
@@ -87,6 +87,9 @@ export default {
     })
   },
   methods : {
+    cekForm(){
+
+    },
     clearForm(){
       this.email = '',
       this.password = ''
@@ -96,27 +99,40 @@ export default {
       setGuest : 'auth/setGuest'
     }),
     login(){
-      let dataLogin = new FormData()
-      dataLogin.append('email', this.email)
-      dataLogin.append('password', this.password)
-
-      let config = {
-          method : "post",
-          url : "https://fishcek.herokuapp.com/api/v1/login",
-          data : dataLogin
-        }
-
-        this.axios(config)
-        .then((response) => {
-          console.log(response.data.data.token)
-          this.setToken(response.data.data)
-          this.clearForm()
-          this.$router.push('/home')
-        })
-        .catch((error) => {
-          console.log(error)
-        })        
+      var token           = '';
+      var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      var charactersLength = characters.length;
+      for ( var i = 0; i < 20; i++ ) {
+        token += characters.charAt(Math.floor(Math.random() * 
+        charactersLength));
+      }
+      console.log(token)
+      this.setToken(token)
+      this.clearForm()
+      this.$router.push('/home')
     }
+    // login(){
+    //   let dataLogin = new FormData()
+    //   dataLogin.append('email', this.email)
+    //   dataLogin.append('password', this.password)
+
+    //   let config = {
+    //       method : "post",
+    //       url : "https://fishcek.herokuapp.com/api/v1/login",
+    //       data : dataLogin
+    //     }
+
+    //     this.axios(config)
+    //     .then((response) => {
+    //       console.log(response.data.data.token)
+    //       this.setToken(response.data.data)
+    //       this.clearForm()
+    //       this.$router.push('/home')
+    //     })
+    //     .catch((error) => {
+    //       console.log(error)
+    //     })        
+    // }
   }
 }
 </script>
