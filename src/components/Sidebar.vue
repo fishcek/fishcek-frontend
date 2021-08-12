@@ -4,7 +4,6 @@
           <div class="container">
             <button class="btn-cs btn-cs-blue-outline" v-b-toggle.sidebar-no-header>
               <b-icon icon="chevron-double-right" class="fs-15" style="font-weight: 600;"></b-icon>
-              Menu
             </button>
             <b-sidebar id="sidebar-no-header" aria-labelledby="sidebar-no-header-title" no-header shadow>
               <template #default="{ hide }">

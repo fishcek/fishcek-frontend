@@ -24,32 +24,33 @@
 
       <section id="cekPenipuan" class="cekPenipuan">
         <div class="container" data-aos="fade-up">
-            <h2 class="cekPenipuan-title">Cek Penipuan</h2>
-            <div class="cekPenipuan-input bc-blur">
-                <h4 class="text-center fs-16 m-t-10 m-b-20">Silahkan Pilih Kategori</h4>
-                <div class="container text-center">
+            <div class="cekPenipuan-input">
+              <div class="cekPenipuan-title">
+                Cek Penipuan Online
+              </div>
+                <div class="cekPenipuan-form">
+                <h4 class="fs-16 m-t-10 m-b-20">Silahkan Pilih Kategori</h4>
                   <b-tabs 
                     pills 
                     content-class="m-t-13 "
-                    active-nav-item-class="btn-cs btn-cs-blue"
-                    align="center" v-model="tabIndex" >
+                    align="left" v-model="tabIndex" >
                     <b-tab title="No Rekening" class="fs-10" @click="pencarianClear()">
                     </b-tab>
                     <b-tab title="No Telepon" @click="pencarianClear()">
                     </b-tab>
-                    <input type="number" class="form-control m-t-10" ref="pencarian" :placeholder="textPlaceholder" v-model="pencarianPenipuan"/>
-                      <p class="text-error">{{txterror}}</p>
+                    <input type="number" class="form-control m-t-10" ref="pencarian" @keyup="cekNomor()" :placeholder="textPlaceholder" v-model="pencarianPenipuan"/>
+                      <p class="text-error m-t-5">{{txterror}}</p>
                     </b-tabs>
-                <input type="button" class="btn-cs btn-cs-blue m-t-5 m-b-10" value="Cek Penipuan" @click="cariPenipuan()" > 
+                <input type="button" class="btn-cs btn-cs-blue m-b-10" value="Cek Penipuan" @click="cariPenipuan()" > 
                 
                 </div>
             </div>
         </div>
       </section>
     </div>
+    
       <section id="artikel" class="artikel">
         <div class="container" data-aos="fade-up">
-            <h2 class="artikel-title">Artikel</h2>
             <div class="artikel-page bc-blur">
                 <div class="boxed">
                   <h2 class="artikel-title">Artikel</h2>
@@ -59,9 +60,9 @@
       </section>
       <section id="faq" class="faq">
         <div class="container" data-aos="fade-up">
-            <h2 class="faq-title">FAQ</h2>
             <div class="faq-page bc-blur">
                 <div class="boxed">
+                <h2 class="faq-title">FAQ</h2>
 
                   <div class="accordion" role="tablist">
                     <b-card no-body class="mb-1">
@@ -143,9 +144,14 @@ export default {
         this.txterror='Kolom Pencarian Harus Diisi'
         this.$refs.pencarian.focus();
       }
-      
-      // console.log(this.tabIndex)
-      // console.log(this.pencarianPenipuan)
+    },
+    cekNomor(){
+      if (this.pencarianPenipuan<0) {
+        this.txterror='Nomor Tidak Valid'
+        this.pencarianPenipuan=''; 
+      }else{
+        this.txterror=''
+      }
     }
   }
 }

@@ -21,3 +21,16 @@ window.onclick = function(event) {
     // }
     
 }
+
+//sidebar
+// let btn = document.querySelector("#btn");
+//    let sidebar = document.querySelector(".sidebar");
+//    let searchBtn = document.querySelector(".bx-search");
+
+//    btn.onClick
+//    btn.onClick = function() {
+//      sidebar.classList.toggle("active");
+//    }
+//    searchBtn.onClick = function() {
+//      sidebar.classList.toggle("active");
+//    }
