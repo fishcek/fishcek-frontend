@@ -154,7 +154,8 @@ input[type='file'] {
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border-radius: 5px;
   z-index: 1;
-  border: none;
+  border: none;  
+  right: 10px;
 }
 
 .profil-dropdown .dropdown-menu a{
@@ -191,13 +192,14 @@ input[type='file'] {
 .notif-dropdown .dropdown-menu{
   background-color: #fff;
   padding: 10px 10px 5px 10px;
+  /* min-width: auto; */
   min-width: 300px;
   margin-top: 5px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   border-radius: 5px;
   z-index: 1;
   border: none;
-  right: -200px;
+  right: 10px;
 }
 
 .notif-dropdown .dropdown-menu a{
@@ -2135,19 +2137,25 @@ input[type='file'] {
     display: block;
     text-align: center;
   }
-
+  .cekPenipuan .cekPenipuan-form{
+    font-weight: 500;
+    margin-top: 0px;
+  }
   .cekPenipuan .cekPenipuan-title{
     font-size: 25px;
     font-weight: 500;
-  }
-
-  .cekPenipuan .cekPenipuan-form {
   }  
   .cekPenipuan .nav-pills {    
+    width: 100%; 
   }  
-  .cekPenipuan .nav-pills .nav-item{
-    background-color: #424242;
-    justify-content: left;
+  .cekPenipuan .nav-pills{
+    justify-content: space-evenly !important;
+  }
+  .profil-dropdown .dropdown-menu{
+    right: 5px;
+  }
+  .notif-dropdown .dropdown-menu{
+    right: -50px;
   }
 }
 
