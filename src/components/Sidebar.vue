@@ -93,21 +93,21 @@ export default {
   },
   methods:{
     logout(){
-      let config = {
-          method : 'post',
-          url : "https://fishcek.herokuapp.com/api/v1/logout",
-          headers : {
-              'Authorization':'Bearer '+this.token,
-          },
-        }
-      this.axios(config)
-      .then((response)=>{
-        console.log(response)
-        this.setToken('')
-      })
-      .catch((response) => {
-        console.log(response)
-      })
+      // let config = {
+      //     method : 'post',
+      //     url : "https://fishcek.herokuapp.com/api/v1/logout",
+      //     headers : {
+      //         'Authorization':'Bearer '+this.token,
+      //     },
+      //   }
+      // this.axios(config)
+      // .then((response)=>{
+      //   console.log(response)
+      //   this.setToken('')
+      // })
+      // .catch((response) => {
+      //   console.log(response)
+      // })
     },
     ...mapActions({
       setToken:'auth/setToken' 
@@ -127,7 +127,7 @@ export default {
         document.getElementById('bcollapse-b').classList.remove("bg-focus");
       }
     }
-  },
+  }
   
 }
 </script>

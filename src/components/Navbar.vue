@@ -106,23 +106,11 @@ export default {
   methods:{
     menuDropdown(){
             document.getElementById("nav-dropdown").classList.toggle("show")
-        },
+    },
     logout(){
-      let config = {
-          method : 'post',
-          url : "https://fishcek.herokuapp.com/api/v1/logout",
-          headers : {
-              'Authorization':'Bearer '+this.token,
-          },
-        }
-      this.axios(config)
-      .then((response)=>{
-        console.log(response)
-        this.setToken('')
-      })
-      .catch((response) => {
-        console.log(response)
-      })
+      var token = '';
+      this.setToken(token)
+      this.$router.push('/login')
     },
     ...mapActions({
       setToken:'auth/setToken' 

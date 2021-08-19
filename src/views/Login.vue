@@ -3,9 +3,7 @@
     <div class="container-fuild">
         <div class="limiter">
           <div class="container-login-register">
-            <div class="wrap-login-register">
-
-              
+            <div class="wrap-login-register">              
               <div class="login-register-pic">
                 <img src="../assets/img/logo.png" class="login-img" alt="IMG">
               </div>
