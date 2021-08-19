@@ -1,110 +1,73 @@
 <template>
     <div>
-        <b-navbar toggleable="lg" type="dark" class="bc-white bx-shadow" fixed="top">
-          <div class="container">
-            <b-navbar-brand href="#">
-              <img @click="goHome()" src="../assets/img/logo-full.png" class="nav-img" >
-            </b-navbar-brand>
-            <b-collapse id="nav-collapse" is-nav>
-              
-              <nav class="nav-menu ">
-                <b-navbar-nav>
-                  
-                  <b-nav-item href="#" class="text-dark"><router-link to="/home">Beranda</router-link></b-nav-item>
-                  <b-nav-item-dropdown text="Cek Penipuan" variant="primary" no-caret>
-                    <b-dropdown-item to="/cekpelaporan/notelepon">Telepon</b-dropdown-item>
-                    <b-dropdown-item to="/cekpelaporan/norekening">Rekening</b-dropdown-item>
-                  </b-nav-item-dropdown>                  
-
-                  <b-nav-item href="#" class="text-dark"><router-link to="/rekan">RekAn</router-link></b-nav-item>
-                  <b-nav-item href="#" class="text-dark"><router-link to="/artikel">Artikel</router-link></b-nav-item>
-                  <b-nav-item>
-                    <template #default="{ expanded }">
-                      <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
-                      <b-icon v-else icon="chevron-bar-down"></b-icon>
-                    </template>
-                  </b-nav-item>
-                </b-navbar-nav>
-              </nav>              
-            </b-collapse>
-              <div v-if="guest==0" class="nav-right">
-                <router-link to="/login"><button class="btn-cs btn-cs-blue m-r-10">Login</button></router-link>
-                 <router-link to="/register"><button class="btn-cs btn-cs-blue">Register</button></router-link>
-              </div>
-              <div v-else class="nav-right">
+        <header class="nav-bar">
+            <router-link to="/home" ><img src="../assets/img/logo-full.png" class="nav-logo" ></router-link>
+            <nav>
+                <ul class="nav-links">
+                    <li>
+                        <button class="btn-txt" @click="menuDropdown()" > Cek Pelaporan</button>
+                    </li>
+                        <div id="nav-dropdown" class="nav-dropdown-content ">
+                            <router-link to="/cekpelaporan/notelepon">Telepon</router-link>
+                            <router-link to="/cekpelaporan/norekening">Rekening</router-link>
+                        </div>
+                    <li><router-link to="/rekan">ReKAn</router-link></li>
+                    <li><router-link to="/artikel">Artikel</router-link></li>
+                </ul>                
+            </nav>
+            <div class="nav-btn" v-if="guest==0">
+                <router-link to="/register"><button class="btn-cs-regis">Register</button></router-link>
+                <router-link to="/login"><button class="btn-cs-login btn-cs-blue">
+                    <b-icon icon="person-fill" ></b-icon> Login
+                </button></router-link>
+            </div>
+            <div class="nav-btn" v-else>                
                 <div class="notif-dropdown">
-                  <b-nav-item-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
-                      <template #button-content>
-                        <b-icon icon="app-indicator" class="notif-icon" style="font-weight"></b-icon>
-                      </template>
-                      <b-dropdown-item to="">Notification</b-dropdown-item>
-                  </b-nav-item-dropdown>
+                    <b-nav-item-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
+                        <template #button-content>
+                            <b-icon icon="app-indicator" class="notif-icon" style="font-weight"></b-icon>
+                        </template>
+                        <b-dropdown-item to="">Notifikasi</b-dropdown-item>
+                    </b-nav-item-dropdown>
                 </div>
                 <div class="profil-dropdown">
-                  <b-nav-item-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
-                      <template #button-content>
-                        <img src="../assets/img/dumuser.png" rounded="circle" alt="Image 2">
-                      </template>
-                      <b-dropdown-item to="/profil">Profil</b-dropdown-item>
-                      <b-dropdown-item to="/pelaporan">Buat Laporan</b-dropdown-item>
-                      <!-- <b-dropdown-item to="/transaksi">Transaksi</b-dropdown-item> -->
-                      <b-dropdown-item @click="logout">Logout</b-dropdown-item>
-                  </b-nav-item-dropdown>
+                    <b-nav-item-dropdown variant="link" toggle-class="text-decoration-none" no-caret>
+                        <template #button-content>
+                            <img src="../assets/img/dumuser.png" rounded="circle" alt="Image 2">
+                            <!-- <span class="username">Username</span> -->
+                        </template>
+                        <b-dropdown-item><router-link to="/profil"> Profil </router-link></b-dropdown-item>
+                        <b-dropdown-item><router-link to="/pelaporan"> Buat Laporan </router-link></b-dropdown-item>
+                        <!-- <b-dropdown-item to="/transaksi">Transaksi</b-dropdown-item> -->
+                        <b-dropdown-item @click="logout">Logout</b-dropdown-item>
+                    </b-nav-item-dropdown>
                 </div>
-              </div>
-              
-            <b-navbar-toggle target="nav-collapse" class="text-dark">
-              <template #default="{ expanded }">
-              <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
-              <b-icon v-else icon="chevron-bar-down"></b-icon>
-            </template>
-
-            </b-navbar-toggle>
-          </div>
-        </b-navbar>
+            </div>
+        </header>
+        
     </div>
-    
 </template>
 <script>
-import {mapGetters, mapActions} from 'vuex'
+import { mapActions, mapGetters } from 'vuex'
 export default {
-  computed:{
-    ...mapGetters({
-      token:'auth/token',
-      guest:'auth/guest'
-    })
-  },
-  methods:{
-    logout(){
-      let config = {
-          method : 'post',
-          url : "https://fishcek.herokuapp.com/api/v1/logout",
-          headers : {
-              'Authorization':'Bearer '+this.token,
-          },
+    computed:{
+        ...mapGetters({
+            token:'auth/token',
+            guest:'auth/guest'
+        })
+    },
+    methods:{
+        menuDropdown(){
+            document.getElementById("nav-dropdown").classList.toggle("show")
+        },
+        ...mapActions({
+            setToken:'auth/setToken'
+        }),
+        logout(){
+            this.setToken('')
         }
-      this.axios(config)
-      .then((response)=>{
-        console.log(response)
-        this.setToken('')
-      })
-      .catch((response) => {
-        console.log(response)
-      })
-    },
-    ...mapActions({
-      setToken:'auth/setToken' 
-    }),
-    onOver() {
-      this.$refs.dropdown.visible = true;
-    },
-    onLeave() {
-      this.$refs.dropdown.visible = false;
-    },
-    goHome(){
-      this.$router.push('/');
+
+
     }
-  },
-  
 }
 </script>

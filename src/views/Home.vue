@@ -51,9 +51,12 @@
     
       <section id="artikel" class="artikel">
         <div class="container" data-aos="fade-up">
-            <div class="artikel-page bc-blur">
+            <div class="artikel-page bc-image3">
                 <div class="boxed">
                   <h2 class="artikel-title">Artikel</h2>
+                  <div class="coming-soon">
+                    <h2>Coming Soon</h2>
+                  </div>                  
                 </div>
             </div>
         </div>
@@ -63,8 +66,41 @@
             <div class="faq-page bc-blur">
                 <div class="boxed">
                 <h2 class="faq-title">FAQ</h2>
-
-                  <div class="accordion" role="tablist">
+                <div class="row m-l-10 m-r-10">
+                  <div class="col-lg-3">
+                      <router-link to="/faq/rekan">
+                        <div class="faq-list">
+                          <b-icon icon="calculator" aria-hidden="true"></b-icon> 
+                          <h6 class="m-t-10">ReKan</h6>
+                        </div>
+                      </router-link>
+                  </div>
+                  <div class="col-lg-3">
+                      <router-link to="/faq/artikel">
+                        <div class="faq-list">
+                          <b-icon icon="card-text" aria-hidden="true"></b-icon> 
+                          <h6 class="m-t-10">Artikel</h6>
+                        </div>
+                      </router-link>
+                  </div>
+                  <div class="col-lg-3">
+                      <router-link to="/faq/cekPelaporan">
+                        <div class="faq-list">
+                          <b-icon icon="credit-card-fill" aria-hidden="true"></b-icon> 
+                          <h6 class="m-t-10">Cek Pelaporan</h6>
+                        </div>
+                      </router-link>
+                  </div>
+                  <div class="col-lg-3">
+                      <router-link to="/faq/sanggahan">
+                        <div class="faq-list">
+                          <b-icon icon="exclamation-octagon-fill" aria-hidden="true"></b-icon> 
+                          <h6 class="m-t-10">Sanggahan</h6>
+                        </div>
+                      </router-link>
+                  </div>
+                </div>
+                  <!-- <div class="accordion" role="tablist">
                     <b-card no-body class="mb-1">
                       <b-card-header header-tag="header" class="p-1" role="tab">
                         <button class="faq-title" v-b-toggle.accordion-1>FAQ 1</button>
@@ -97,7 +133,7 @@
                         </b-card-body>
                       </b-collapse>
                     </b-card>
-                  </div>
+                  </div> -->
 
                 </div>
             </div>
