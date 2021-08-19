@@ -2141,6 +2141,10 @@ input[type='file'] {
 }
 
 @media (max-width: 415px) { /*myphone*/
+  #hero {
+    height: 45vh;
+    padding: 150px 0px 50px 0px;
+  }
   .nav-img{
     width: 100px;
   }
