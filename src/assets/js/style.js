@@ -21,7 +21,7 @@ window.onclick = function(event) {
     // }
     
 }
-
+window.__forceSmoothScrollPolyfill__ = true;
 //sidebar
 // let btn = document.querySelector("#btn");
 //    let sidebar = document.querySelector(".sidebar");
