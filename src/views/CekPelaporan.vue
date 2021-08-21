@@ -1,37 +1,45 @@
 <template>
-    <div>
-        <navbar/>
-        <div class="cekPenipuan-page container p-t-80">
-            <div class="m-t-10">
-                <div class="boxed-fluid">
-                    <div class="boxed bc-image1 text-center">
-                        <div class="container">
-                            <h2>Cek {{type}} Penipu Online</h2>
-                            <div class="boxed-input bc-blur">
-                                <input type="number" class="form-control" ref="pencarian" v-model="pencarianPenipuan" :placeholder="textPlaceholder">
-                                <span class="text-error">{{txterror}}</span>
-                                <p>Contoh : <span class="highlight"> {{noContoh}} </span></p>
-                                <input type="button" class="btn-cs btn-cs-blue m-t-5 " value="Cek Penipuan" @click="cariPenipuan()">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="reportRecap">
-                        <!-- <div class="reportRecap-detail bc-blue">
-                            <h2>99999+</h2>
-                            <h6>Kasus penipuan melalui nomor telepon yang telah dilaporkan pengguna</h6>
-                        </div>
-                        <div class="reportRecap-detail bc-blue">
-                            <h2>99999+</h2>
-                            <h6>Nomor telepon telah terblacklist pada sistem Fishcek</h6>
-                        </div>
-                        <div class="reportRecap-detail bc-blue">
-                            <h2>Rp99999</h2>
-                            <h6>Total kerugian yang dilaporkan sejak 1 Januari 2018</h6>
-                        </div> -->
-                    </div>
+    <div class="bc-image3 ">
+        <Navbar/>
+        <div class="cekPenipuan-page container">
+            <div class="boxed-fluid text-center">
+                <div class="container">
+                    <h2 class="p-b-10">Cek {{type}} Penipu Online</h2>
+                    <input type="number" class="form-control m-t-10" ref="pencarian" v-model="pencarianPenipuan" :placeholder="textPlaceholder">
+                    <span class="text-error">{{txterror}}</span>
+                    <p>Contoh : <span class="highlight"> {{noContoh}} </span></p>
+                    <input type="button" class="btn-cs btn-cs-blue" value="Cek Penipuan" @click="cariPenipuan()">
                 </div>
-                
-            </div>
+                <div class="reportRecap m-t-50">
+                    <h2 class="reportRecap-title">Hasil Penipuan</h2>
+                    <div class="row m-l-10 m-r-10">
+                        <div class="col-lg-4">
+                            <router-link to="#">
+                                <div class="reportRecap-list bc-blue-dark">
+                                    <h2>99999+</h2>
+                                    <h6>Penipuan melalui nomor telepon yang telah dilaporkan pengguna</h6>
+                                </div>
+                            </router-link>
+                        </div>
+                        <div class="col-lg-4">
+                            <router-link to="#">
+                                <div class="reportRecap-list bc-blue-dark">
+                                    <h2>99999+</h2>
+                                    <h6>Nomor telepon telah terblacklist pada sistem Fishcek</h6>
+                                </div>
+                            </router-link>
+                        </div>
+                        <div class="col-lg-4">
+                            <router-link to="#">
+                                <div class="reportRecap-list bc-blue-dark">
+                                    <h2>99999+</h2>
+                                    <h6>Total kerugian yang dilaporkan sejak 1 Januari 2018</h6>
+                                </div>
+                            </router-link>
+                        </div>
+                    </div> 
+                </div>
+            </div>  
         </div>
         <Footer/>
     </div>

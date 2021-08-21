@@ -61,9 +61,9 @@
 
             <div class="navDesktop">
                 <div class="nav-btn" v-if="guest==0">
-                    <router-link to="/register"><button class="btn-cs-regis">Register</button></router-link>
+                    <router-link to="/register"><button class="btn-cs-regis">Daftar</button></router-link>
                     <router-link to="/login"><button class="btn-cs-login btn-cs-blue">
-                        <b-icon icon="person-fill" ></b-icon> Login
+                        Masuk
                     </button></router-link>
                 </div>
                 <div class="nav-btn" v-else>                

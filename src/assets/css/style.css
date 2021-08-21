@@ -23,6 +23,13 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Poppins", sans-serif;
 }
+a, a:active{
+  color: #2196f3 !important;
+  text-decoration: none;
+}
+a:hover{
+  color: #1e81d3 !important;
+}
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -770,10 +777,11 @@ input[type='file'] {
 
 .cekPenipuan-page{
   width: 100% !important;
+  padding: 180px 0px 120px 0px;
 }
 
 .cekPenipuan-page .boxed{
-  background-color: #fff;
+  background-color: rgba(0, 0, 0, 1);
   padding: 10px;  
   box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
 }
@@ -794,20 +802,25 @@ input[type='file'] {
 
 .cekPenipuan-page .boxed-fluid{
   background-color: #fff ;  
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
-  
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 1);
+  padding: 50px 60px;
 }
 
-.cekPenipuan-page .boxed-fluid .boxed{
-  background-color: #fff;
-  padding: 30px;  
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+.cekPenipuan-page .boxed-fluid span{
+  font-weight: 700;
 }
 
-.cekPenipuan-page .boxed-fluid .boxed h2{
-  color: #fff;
-  padding: 10px;    
-  text-shadow: 0px 0px 5px rgba(38, 50, 56, 1);
+.cekPenipuan-page .boxed-fluid p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #212121;
+}
+
+.cekPenipuan-page .boxed-fluid .highlight{
+  font-size: 18px;
+  font-weight: 600;
+  color: #212121;
 }
 
 .boxed-hover{
@@ -852,55 +865,31 @@ input[type='file'] {
   padding-bottom: 5px;
 }
 
-
-.boxed-input{
-  width: 60%;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 10px;
-  border-radius: 10px;
-}
-
-.boxed-input span{
-  font-weight: 700;
-}
-
-.boxed-input p{
-  font-size: 14px;
-  font-weight: 600;
-  color: #fff;
-}
-
-.boxed-input .highlight{
-  font-size: 18px;
-  font-weight: 600;
-  color: #fff;
-}
-
 .reportRecap{
-  padding: 40px;
-  position: relative;
-  display: inline-flex;
-  margin-left: 18%;
-  margin-right: 10%;
-}
-
-.reportRecap .reportRecap-detail{
-  width: 25%;  
-  margin-right: 10px;
-  margin-left: 20px;
-  padding: 10px 30px 10px 30px;
-  color: #fff;
+  width: 100% !important;    
   border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0);  
+}
+.reportRecap a{
+  text-decoration: none;
+}
+.reportRecap .reportRecap-title{
+  font-size: 20px;
+  padding-bottom: 10px;
 }
 
-.reportRecap .reportRecap-detail h6{
-  font-weight: 400;
+.reportRecap-list{  
+  margin-bottom: 20px;
+  font-size: 38px;
+  color: #FFF;
+  text-align: center;  
+  transition: 0.3s;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 /*-------------------------------------*/
+
 
 .rating{
   margin-left: -15px;
@@ -1045,6 +1034,50 @@ input[type='file'] {
   font-size: 35px;
   font-weight: 200;
   padding: 0 !important;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+/* #hero {
+  width: 100%;
+  height: 60vh;
+  background: #fff;
+} */
+.termPrivacy {
+  width: 100%;
+  height: auto;
+  background-color: rgba(0, 0, 0, 0);
+  padding: 120px 0px;
+}
+.termPrivacy .boxed{
+  background-color: #fff;
+  padding: 20px;  
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.3);
+  border-radius: 10px;
+}
+.termPrivacy h3{
+  font-weight: 650;
+  padding-bottom: 10px;
+  color: #000 !important;
+}
+.termPrivacy h5{
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+.termPrivacy-list .heading{
+  font-weight: 650;
+  padding-bottom: 10px;
+}
+.termPrivacy-list p{
+  padding: 0px 10px;
+}
+.termPrivacy-list span{
+  font-size: 12px;
+  cursor: pointer;
+}
+.termPrivacy-list span:hover{
+  color: #e91e63;
 }
 
 /*--------------------------------------------------------------
@@ -1570,26 +1603,26 @@ input[type='file'] {
 }
 
 .footer-bc .footer-top .footer-contact h2{  
-  font-weight: 650;
-  color: #3b7fe4;
+  font-weight: 600;
+  color: #2196f3;
 }
 
 .footer-bc .footer-top .footer-contact p{  
   line-height: 25px;
+  
+  font-size: 14px;
 }
 
 .footer-bc .footer-top .footer-contact a{ 
   text-decoration: none;
   line-height: 25px;
-  font-size: 14px;
-  color: #212121;
+  color: #212121 !important;
   padding-left: 5px;
 }
 
 
-.footer-bc .footer-top .footer-contact a:hover, .footer-bc .footer-top .footer-contact a:focus{  
-  color: #4f5251;
-  font-weight: 700;
+.footer-bc .footer-top .footer-contact a:hover, .footer-bc .footer-top .footer-links a:hover{  
+  color: #2196f3 !important;
 }
 
 .footer-bc .footer-top .footer-links a{  
@@ -1597,7 +1630,7 @@ input[type='file'] {
   text-decoration: none;
   line-height: 25px;
   font-size: 14px;
-  color: #212121;
+  color: #212121 !important;
 }
 
 .footer-bc .footer-top .footer-links a:hover, .footer-bc .footer-top .footer-links a:active{
@@ -1609,7 +1642,7 @@ input[type='file'] {
   text-decoration: none;
   line-height: 25px;
   font-size: 14px;
-  color: #fff;
+  color: #fff !important;
 }
 
 .footer-bc .footer-bottom{  
@@ -1708,6 +1741,12 @@ input[type='file'] {
 }
 .bc-blue{
   background-color: #2196f3 !important;
+}
+.bc-blue-dark{
+  background-color: #0067bb !important;
+}
+.bc-blue-dark:hover{
+  background-color: #004d8b !important;
 }
 .bc-blue-light{
   background: #a2d9ff !important;
@@ -1810,7 +1849,7 @@ input[type='file'] {
 }
 
 .btn-cs-login{
-  padding: 8px 15px 8px 15px;
+  padding: 8px 10px;
   font-size: 14px;
   color: #212121 !important;
   font-weight: 500;
@@ -1823,7 +1862,7 @@ input[type='file'] {
 
 .btn-cs-login .b-icon{
   font-size: 14px;
-  margin-right: 5px;
+  margin-right: 2px;
 }
 
 .btn-cs-regis{

@@ -49,7 +49,7 @@
                   <div class="wrap-input-form">
                     <div class="form-group">
                       <input type="checkbox" name="name" class="form-checkbox" id="name" v-model="term" />
-                      <span class="txt3 p-l-5">Saya Menyetujui <a href="#"> Syarat dan Ketentuan</a> serta <a href="#">Kebijakan Privasi</a></span>
+                      <span class="txt3 p-l-5">Saya Menyetujui <router-link to="/policy/term">Syarat dan Ketentuan</router-link> serta <router-link to="/policy/privacy">Kebijakan Privasi</router-link></span>
                     </div>
                   </div>
 

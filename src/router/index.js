@@ -20,13 +20,23 @@ const routes = [
   },
   {
     path: '/login',
-    name: 'Login',
+    name: 'Masuk',
     component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
   },
   {
     path: '/register',
-    name: 'Register',
+    name: 'Daftar',
     component: () => import(/* webpackChunkName: "about" */ '../views/Register.vue')
+  },
+  {
+    path: '/policy/term',
+    name: 'Syarat dan Ketentuan',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Term.vue')
+  },
+  {
+    path: '/policy/privacy',
+    name: 'Kebijakan Privasi',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Privacy.vue')
   },
   {
     path: '/cekpelaporan/:type',
@@ -131,7 +141,6 @@ router.beforeEach((to, from, next) => {
       namePage=`${process.env.VUE_APP_TITLE} | ${to.name}`
     }
     document.title=namePage
-    console.log(namePage)
     next()
   })
 

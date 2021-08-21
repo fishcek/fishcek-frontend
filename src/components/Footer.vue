@@ -7,27 +7,26 @@
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-contact">
                             <h2>Fishcek</h2>
                             <p>
-                                <strong>Admin 1 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">+62 895 3263 93065</a><br>
-                                <strong>Admin 2 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">+62 5589 55488 55</a><br>
-                                <strong>Admin 3 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">+62 5589 55488 55</a><br>
-                                <strong>Email :</strong> info@example.com<br>  
+                                <strong>Phone 1 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">+62 895 3263 93065</a><br>
+                                <strong>Phone 2 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">+62 5589 55488 55</a><br>
+                                <strong>Phone 3 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">+62 5589 55488 55</a><br>
+                                <strong>Email :</strong> <a href="#">info@example.com</a><br>  
                             </p>                         
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-links m-b-10">
-                            <h5>Link</h5>
-                            <a href="#">Home</a>
-                            <a href="#">About us</a>
-                            <a href="#">Services</a>
-                            <a href="#">Terms of service</a>
-                            <a href="#">Privacy policy</a>                            
+                            <h5>Layanan Kami</h5>
+                            <a href="#">Cek Penipuan</a>
+                            <router-link to="/artikel">Artikel</router-link>
+                            <router-link to="/rekan">ReKan</router-link>
+                            <router-link to="/FAQ">FAQ</router-link>
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-links m-b-10">
-                            <h5>Layanan Kami</h5>
-                            <a href="#">Home</a>
-                            <a href="#">About us</a>
-                            <a href="#">Services</a>
-                            <a href="#">Terms of service</a>
-                            <a href="#">Privacy policy</a>
+                            <h5>Fishcek</h5>
+                            <a href="#">Tentang Fishcek</a>
+                            <a href="#">Hak Kekayaan Intelektual</a>
+                            <a href="#">Layanan</a>
+                            <router-link to="/policy/term">Syarat dan Ketentuan</router-link>
+                            <router-link to="/policy/privacy">Kebijakan Privacy</router-link>                            
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-links m-b-10">
                             <h5>Sosial Media</h5>
