@@ -10,7 +10,7 @@
                                 <strong>Phone 1 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">+62 895 3263 93065</a><br>
                                 <strong>Phone 2 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">+62 5589 55488 55</a><br>
                                 <strong>Phone 3 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">+62 5589 55488 55</a><br>
-                                <strong>Email :</strong> <a href="#">info@example.com</a><br>  
+                                <strong>Email :</strong> <a href="#">info.fishcek@gmail.com</a><br>  
                             </p>                         
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-links m-b-10">
@@ -24,17 +24,17 @@
                             <h5>Fishcek</h5>
                             <a href="#">Tentang Fishcek</a>
                             <a href="#">Hak Kekayaan Intelektual</a>
-                            <a href="#">Layanan</a>
                             <router-link to="/policy/term">Syarat dan Ketentuan</router-link>
-                            <router-link to="/policy/privacy">Kebijakan Privacy</router-link>                            
+                            <router-link to="/policy/privacy">Kebijakan Privacy</router-link>  
+                            <router-link to="/policy/contact">Hubungi Kami</router-link>                            
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-links m-b-10">
                             <h5>Sosial Media</h5>
                             <p>Memberikan berita dan informasi terkini di dunia perikanan</p>                            
                             <div class="social-links mt-3">
                             <a href="#" class="btn-cs-outline-circle bc-youtube"> <b-icon icon="youtube" style="font-weight"></b-icon> </a>
-                            <a href="#" class="btn-cs-outline-circle bc-facebook"> <b-icon icon="facebook" style="font-weight"></b-icon> </a>
-                            <a href="#" class="btn-cs-outline-circle bc-instagram"> <b-icon icon="instagram" style="font-weight"></b-icon> </a>
+                            <a href="https://www.facebook.com/fishcek.fishcek.9" target="blank" class="btn-cs-outline-circle bc-facebook"> <b-icon icon="facebook" style="font-weight"></b-icon> </a>
+                            <a href="https://www.instagram.com/fishcek_/" target="blank" class="btn-cs-outline-circle bc-instagram"> <b-icon icon="instagram" style="font-weight"></b-icon> </a>
                             <a href="#" class="btn-cs-outline-circle bc-twitter"> <b-icon icon="twitter" style="font-weight"></b-icon> </a>
                             </div>
                         </div>

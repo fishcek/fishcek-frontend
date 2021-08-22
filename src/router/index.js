@@ -39,6 +39,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Privacy.vue')
   },
   {
+    path: '/policy/contact',
+    name: 'Hubungi Kami',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Contact.vue')
+  },
+  {
     path: '/cekpelaporan/:type',
     name: 'Cek Pelaporan',
     component : CekPelaporan
