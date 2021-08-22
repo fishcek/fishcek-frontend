@@ -7,10 +7,10 @@
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-contact">
                             <h2>Fishcek</h2>
                             <p>
-                                <strong>Phone 1 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">+62 895 3263 93065</a><br>
-                                <strong>Phone 2 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">+62 5589 55488 55</a><br>
-                                <strong>Phone 3 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">+62 5589 55488 55</a><br>
-                                <strong>Email :</strong> <a href="#">info.fishcek@gmail.com</a><br>  
+                                <strong>Phone 1 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">{{contact[0].phone}}</a><br>
+                                <strong>Phone 2 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">{{contact[1].phone}}</a><br>
+                                <strong>Phone 3 :</strong><a href="https://api.whatsapp.com/send/?phone=62895326393065">{{contact[2].phone}}</a><br>
+                                <strong>Email :</strong> <a href="mailto:info.fishcek@gmail.com">{{contact[3].email}}</a><br>  
                             </p>                         
                         </div>
                         <div class="col-lg-3 col-md-6 col-sm-12 footer-links m-b-10">
@@ -55,3 +55,15 @@
         </div>
     </div>
 </template>
+<script>
+export default {
+    data:()=>({
+        contact:[
+          { phone: '+62 895 3263 93065', admin: 'Fred'},
+          { phone: '+62 5589 55488 55', admin: 'Fred'},
+          { phone: '+62 5589 55488 55', admin: 'Fred'},
+          { email: 'info.fishcek@gmail.com', admin: 'Fred'},
+        ]
+    })
+}
+</script>

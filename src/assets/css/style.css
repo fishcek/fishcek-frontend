@@ -2440,6 +2440,9 @@ box-shadow: 0px 0px 10px rgba(127, 137, 161, 0.25);
     float: right;
     font-size: 12px;
   }
+  .contactUs .boxed {
+    padding: 0px 40px;
+  }
 }
 
 @media (max-width: 375px) {
