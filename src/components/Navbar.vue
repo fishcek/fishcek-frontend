@@ -21,23 +21,16 @@
                   <nav class="mb-3">
                     <b-nav vertical>
                       <div class="nav-vertical">
-                        <span class="text-muted fs-12">Layanan</span>
+                        <span class="text-muted fs-12">Menu</span>
                         <hr class="dashed">
                         <b-nav-item v-b-toggle.collapse-a id="bcollapse-a">Cek Pelaporan</b-nav-item>                     
                         <b-collapse id="collapse-a" class="collapse-menu" >
                           <b-nav-item to="/cekpelaporan/notelepon" @click="hide">Telepon</b-nav-item>
                           <b-nav-item to="/cekpelaporan/norekening" @click="hide">Rekening</b-nav-item>
                         </b-collapse>
-                        <b-nav-item v-b-toggle.collapse-b id="bcollapse-b">Laporan Saya</b-nav-item>                     
-                        <b-collapse id="collapse-b" class="collapse-menu">
-                          <b-nav-item to="/myreport/notelepon" @click="hide">Nomor Telepon</b-nav-item>
-                          <b-nav-item to="/myreport/norekening" @click="hide">Nomor Rekening</b-nav-item>
-                        </b-collapse>
-                        <br>
-                        <span class="text-muted fs-12">Member</span>
+                        <b-nav-item to="/rekan" @click="hide">ReKan</b-nav-item>
+                        <b-nav-item to="/artikel" @click="hide">Artikel</b-nav-item>
                         <hr class="dashed">
-                        <b-nav-item to="/profil" @click="hide">Profil</b-nav-item>
-                        <b-nav-item to="/myartikel" @click="hide">Artikel Saya</b-nav-item>
                       </div>
                     </b-nav>
                   </nav>

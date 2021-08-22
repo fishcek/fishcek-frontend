@@ -1037,13 +1037,8 @@ input[type='file'] {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
+# termPrivacy Section
 --------------------------------------------------------------*/
-/* #hero {
-  width: 100%;
-  height: 60vh;
-  background: #fff;
-} */
 .termPrivacy {
   width: 100%;
   height: auto;
@@ -1455,17 +1450,20 @@ input[type='file'] {
   position: absolute;
   left: 0;
   color: white;
-  text-align: center;
-  z-index: 1;
-  bottom: 10px;
+  z-index: 3;
+  bottom: 50px;
 }
 .wave2{
+  display: block;
   width: 100%;
   position: absolute;
   left: 0;
   color: white;
   z-index: 4;
-  bottom: 0;
+  bottom: 0px;
+}
+.wave3{
+  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -2109,8 +2107,7 @@ input[type='file'] {
     padding: 0px 0px 50px 0px;
   }
 }
-
-@media (max-width: 575px) {
+@media screen and (max-width: 575px) {
   .mobileToggle{
     display: block;
   }
@@ -2132,7 +2129,8 @@ input[type='file'] {
     margin-left: 35%;
   }
   #hero{
-    padding: 100px 0px 150px 0px;
+    height: 50vh;
+    padding: 100px 0px 100px 0px;
   }
   #hero h1{
     padding: 20px 10px 0px 10px;
@@ -2177,9 +2175,70 @@ input[type='file'] {
     max-width: 100%;
     margin-top: 10px;
   }
+  .cekPenipuan-page{
+    width: 95% !important;
+    padding: 120px 0px 50px 0px;
+  }
+  .termPrivacy {
+    width: 95%;
+    padding: 80px 0px;
+  }
+  .pageError .logo{
+    width: 150px;
+    margin: auto;
+  }
+  .pageError h2{
+    font-size: 30px;
+  }
+  .pageError h3{
+    font-size: 120px;
+  }
+  .wave1{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    color: white;
+    z-index: 3;
+    bottom: -20px;
+  }
+  .wave2{
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    color: white;
+    z-index: 4;
+    bottom: -50px;
+  }
+  .wave3{
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    color: white;
+    z-index: 2;
+    bottom: 10px;
+  }
+  #footer-error-page .copyright {
+    float: left;    
+    font-size: 12px;
+  }
+  
+  #footer-error-page .copyright a{
+    font-size: 13px;
+  }
+  
+  #footer-error-page .copyright a:hover{
+    text-decoration: none;
+    color: #d2d2d2 !important;
+  }
+  
+  #footer-error-page .credits {
+    float: right;
+    font-size: 12px;
+  }
 }
-
-@media (max-width: 415px) { /*myphone*/
+@media screen and (max-width: 415px) {  /*myphone*/
   #hero {
     height: 45vh;
     padding: 150px 0px 50px 0px;
@@ -2276,6 +2335,26 @@ input[type='file'] {
     font-size: 40px;
     font-weight: bold;
     color: #3b7fe4;
+  }  
+  .cekPenipuan-page{
+    width: 95% !important;
+    padding: 100px 0px 50px 0px;
+  }
+  .cekPenipuan-page .boxed-fluid{
+    padding: 30px 20px;
+  }
+  .cekPenipuan-page .reportRecap{
+    padding: 0px 30px;
+  }
+  .termPrivacy {
+    width: 95%;
+    padding: 80px 0px;
+  }
+  .termPrivacy .boxed{
+    font-size: 14px;
+  }
+  .termPrivacy-list p{
+    padding: 0px 5px;
   }
 }
 
@@ -2315,6 +2394,21 @@ input[type='file'] {
   }
   .cekPenipuan .cekPenipuan-input{
     padding: 10px;
+  }
+  .wrap-input-form input[type="checkbox"] {
+    width: 12px; height: 12px;
+  }
+  .wrap-input-form .txt3{
+    font-size: 14px;    
+  }
+  #footer-login-register .copyright {
+    float: left;
+    font-size: 12px;
+  }
+  #footer-login-register .credits {
+    float: right;
+    font-size: 12px;
+    padding-top: 1px;
   }
 }
 
