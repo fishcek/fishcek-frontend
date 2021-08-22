@@ -2194,20 +2194,9 @@ input[type='file'] {
     font-size: 120px;
   }
   .wave1{
-    width: 100%;
-    position: absolute;
-    left: 0;
-    color: white;
-    z-index: 3;
     bottom: -20px;
   }
   .wave2{
-    display: block;
-    width: 100%;
-    position: absolute;
-    left: 0;
-    color: white;
-    z-index: 4;
     bottom: -50px;
   }
   .wave3{
@@ -2355,6 +2344,39 @@ input[type='file'] {
   }
   .termPrivacy-list p{
     padding: 0px 5px;
+  }
+  .wave1{
+    bottom: 20px;
+  }
+  .wave2{
+    bottom: 0px;
+  }
+  .wave3{
+    display: block;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    color: white;
+    z-index: 2;
+    bottom: 40px;
+  }
+  #footer-error-page .copyright {
+    float: left;    
+    font-size: 12px;
+  }
+  
+  #footer-error-page .copyright a{
+    font-size: 13px;
+  }
+  
+  #footer-error-page .copyright a:hover{
+    text-decoration: none;
+    color: #d2d2d2 !important;
+  }
+  
+  #footer-error-page .credits {
+    float: right;
+    font-size: 12px;
   }
 }
 
