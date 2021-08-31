@@ -4,22 +4,14 @@
     <div class="bc-image2">
         <section id="termPrivacy" class="termPrivacy container">
             <div class="boxed" data-aos="fade-up">
-                <h3>{{title}}</h3>
-                <div class="termPrivacy-list">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium tincidunt felis. Nullam vestibulum iaculis varius. Cras sollicitudin vel erat quis tincidunt. Fusce ipsum nibh, mollis non neque at, rutrum cursus mi. Nulla ut interdum ex, sit amet sagittis lorem. Morbi eu ipsum neque. Quisque consectetur odio neque, et facilisis turpis varius non. Donec ipsum tortor, aliquam a tellus quis, ultricies congue sem. Ut rhoncus vestibulum orci, et condimentum tellus hendrerit eget. Duis hendrerit erat ac arcu molestie aliquam. Donec convallis sem id elit cursus, sit amet tincidunt nunc commodo. Praesent vel augue ac ante tempor finibus.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium tincidunt felis. Nullam vestibulum iaculis varius. Cras sollicitudin vel erat quis tincidunt. Fusce ipsum nibh, mollis non neque at, rutrum cursus mi. Nulla ut interdum ex, sit amet sagittis lorem. Morbi eu ipsum neque. Quisque consectetur odio neque, et facilisis turpis varius non. Donec ipsum tortor, aliquam a tellus quis, ultricies congue sem. Ut rhoncus vestibulum orci, et condimentum tellus hendrerit eget. Duis hendrerit erat ac arcu molestie aliquam. Donec convallis sem id elit cursus, sit amet tincidunt nunc commodo. Praesent vel augue ac ante tempor finibus.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium tincidunt felis. Nullam vestibulum iaculis varius. Cras sollicitudin vel erat quis tincidunt. Fusce ipsum nibh, mollis non neque at, rutrum cursus mi. Nulla ut interdum ex, sit amet sagittis lorem. Morbi eu ipsum neque. Quisque consectetur odio neque, et facilisis turpis varius non. Donec ipsum tortor, aliquam a tellus quis, ultricies congue sem. Ut rhoncus vestibulum orci, et condimentum tellus hendrerit eget. Duis hendrerit erat ac arcu molestie aliquam. Donec convallis sem id elit cursus, sit amet tincidunt nunc commodo. Praesent vel augue ac ante tempor finibus.
-                    </p>                    
+                <div class="head">
+                    <h3>{{title}}</h3>
+                    <span class="txt-muted-light">Perubahan Terakhir : {{dateUpdate}}</span>
                 </div>
                 <div class="termPrivacy-list">
-                    <ol type="A">
+                    <ol type="1">
                         <li class="heading">Pengumpulan Informasi Pengguna</li>
-                        <ol type="a">
+                        <ol type="A">
                             <li><strong>Profil pengguna</strong>,
                                 Saat Anda mendaftarkan diri anda/ akun anda Pada Website dan atau aplikasi <a href="https://www.fishcek.com" target="blank">Fishcek.com</a>, pihak kami dapat mengumpulkan informasi yang telah Anda berikan pada database kami. Kami mengumpulkan data berupa Nama, Alamat, Nomer Handphone, dan Email Anda. Setiap Anda memberikan informasi itu adalah informasi yang benar, tidak menyesatkan
                             </li>
@@ -31,10 +23,10 @@
                             </li>
                         </ol><br>
                         <li class="heading">Penggunaan Informasi</li>
-                        <ol type="a">
+                        <ol type="A">
                             <li><strong>Menyediakan dan Meningkatkan Layanan</strong>,
                                 Website dan atau aplikasi <a href="https://www.fishcek.com" target="blank">Fishcek.com</a> akan menggunakan informasi untuk keperluan Layanan, seperti :
-                                <ol type="1">
+                                <ol type="a">
                                     <li>Layanan Cek Nomor Rekening. Nomor telepon, review, dan fitur lainnya, agar masyarakat yang akan mlakukan jual beli bertransaksi dengan aman, silahkan gunakan layanan <router-link to="/rekan">ReKan</router-link>.</li>
                                     <li>Menampilkan hasil laporan masyarakat terhadap nomor rekening dan/atau nomor telepon yang telah dilaporkan.</li>
                                 </ol>
@@ -89,7 +81,8 @@ export default {
     Footer
   },
   data:()=>({
-      title:'Kebijakan Privacy'
+      title:'Kebijakan Privacy',
+      dateUpdate:'23 Agustus 2021'
   })
 }
 </script>

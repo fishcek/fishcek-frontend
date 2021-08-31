@@ -1,9 +1,9 @@
 <template>
-  <div class="home">
+  <div class="">
     <Navbar/>
     <div class="bc-image2">
       
-      <section id="hero" class="">     
+      <section id="hero" class="hero">     
         <div class="d-flex">
           <div class="container">
             <div class="row">
@@ -47,7 +47,6 @@
             </div>
         </div>
       </section>
-    </div>
     
       <section id="artikel" class="artikel">
         <div class="container" data-aos="fade-up">
@@ -139,6 +138,8 @@
             </div>
         </div>
       </section>
+      
+    </div>
     <Footer/>
   </div>
 </template>

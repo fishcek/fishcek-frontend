@@ -1,17 +1,19 @@
 <template>
     <div>
         <Sidebar/>
-        <div class="cekPenipuan-page container p-t-80">
-            <div class="m-t-10 boxed b-r">
-                <h4 class="boxed-title">Laporkan Nomor {{kategori}} Penipuan</h4>
-                <h6 class="boxed-subtitle">Laporan kamu sangat berarti untuk mencegah terjadinya penipuan di masa mendatang oleh pelaku yang sama.</h6>
+        <div class="cekPenipuan-page container">
+            <div class="boxed b-r bc-image1">
+                <div class="text-detail">
+                    <h4 class="boxed-title">Laporkan Nomor {{kategori}} Penipuan</h4>
+                    <h6 class="boxed-subtitle">Laporan kamu sangat berarti untuk mencegah terjadinya penipuan di masa mendatang oleh pelaku yang sama.</h6>
+                </div>
             </div>
             <div class="m-t-10">
-                <div class="boxed-fluid b-r">
-                    <div class="boxed b-r bc-image1">
-                        <div class="container">
-                            <h2 class=" text-center">Isi Formnya Ya</h2>
-                            <div class="boxed-form bc-blur b-r c-shadow">
+                <div class="boxed-fluid bx-shadow b-r">
+                    <div class="b-r">
+                        <div class="">
+                            <h2 class="text-center m-b-20">Isi Formnya Ya</h2>
+                            <div class="boxed-form">
                                 <b-form @submit="onSubmit" @reset="onReset"> 
                                     <div class="boxed-form-title ">
                                         <h6>Beritahu Kami Siapa Dia</h6>
@@ -90,10 +92,9 @@
                                                 </b-form-group>
                                             </b-col>
                                         </b-row>
-                                    </div>                                  
-                                    
-                                    
-                                    <div class="boxed-form-title border-top">
+                                    </div>  
+
+                                    <div class="boxed-form-title">
                                         <h6>Jelaskan Peristiwanya Kepada Kami</h6>
                                     </div>
 
@@ -128,22 +129,36 @@
                                         </b-input-group>
                                     </b-form-group>
 
-                                    <div class="boxed-form-title border-top">
+                                    <div class="boxed-form-title">
                                         <h6>Berikan Bukti Kronologinya</h6>
                                     </div>
 
-                                    <b-form-group id="input-group-5" class="m-b-10">
+                                    <b-form-group id="input-group-5" style="display:none">
                                         <b-form-file
                                         v-model="lampiran"
                                         :state="Boolean(lampiran)"
                                         multiple
-                                        class="form-control custom-file-input"
+                                        class="form-control"
                                         @change="cekFile()"
                                         ref="myFiles"
                                         id="file"
                                         ></b-form-file>
                                     </b-form-group>
-                                    <div class="text-center">
+                                    <div class="fileInput" @click="openFile()">
+                                        <h6>Pilih File</h6>
+                                    </div>
+                                    <br>
+                                    <b-form-file
+                                        v-model="file1"
+                                        :state="Boolean(file1)"
+                                        multiple
+                                        placeholder="Pilih File atau Letakan File Disini"
+                                        drop-placeholder="Letakan File Disini"
+                                        class="fileInput"
+                                        @change="cekFile()"
+                                        no-traverse
+                                    ></b-form-file>
+                                    <div class="text-center m-t-20">
                                         <b-button type="submit" class="btn-cs btn-cs-blue m-t-5 m-r-10 ">Submit</b-button>
                                         <b-button type="reset" class="btn-cs btn-cs-red m-t-5 ">Reset</b-button>
                                     </div>
@@ -160,7 +175,7 @@
                         </div>
                     </div>
                 </div>            
-                <div class="m-t-10 b-r boxed">
+                <div class="m-t-20 b-r boxed">
                     <h6 class="text-center text-spacing">Terimakasih Telah Melapor. Laporan Kamu Akan Kami Proses</h6>
                 </div>    
             </div>
@@ -187,6 +202,7 @@ export default {
         contactName:'',
         totalKerugian:null,
         lampiran:[],
+        file1:[],
         checked: [],
         platforms : [
                         {
@@ -852,7 +868,10 @@ export default {
             console.log(this.pencarianPenipuan)
         },
         cekFile(){
-            console.log(this.lampiran)
+            console.log(this.file1)
+        },
+        openFile(){
+            document.getElementById('file').click()
         },
         onSubmit(event) {
             event.preventDefault()

@@ -1,8 +1,8 @@
 <template>
     <div>
         <Sidebar/>
-        <div class="cekPenipuan-page container p-t-80">
-            <div class="m-t-10 boxed b-r bc-image1">
+        <div class="cekPenipuan-page container">
+            <div class="boxed b-r bc-image1">
                 <h4 class="boxed-title txt-white">Laporkan Nomor Rekening Atau Nomor Telepon Penipuan</h4>
                 <h6 class="boxed-subtitle txt-white">Laporan kamu sangat berarti untuk mencegah terjadinya penipuan di masa mendatang oleh pelaku yang sama.</h6>
             </div>

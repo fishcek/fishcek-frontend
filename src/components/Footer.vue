@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="footer footer-bc">
+        <div class="footer footer-bc bc-shadow-lg">
             <div class="footer-top">      
                 <div class="container">
                     <div class="row">

@@ -4,20 +4,28 @@
     <div class="bc-image2">
         <section id="termPrivacy" class="termPrivacy container">
             <div class="boxed" data-aos="fade-up">
-                <h3>{{title}}</h3>
-                <div class="termPrivacy-list">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium tincidunt felis. Nullam vestibulum iaculis varius. Cras sollicitudin vel erat quis tincidunt. Fusce ipsum nibh, mollis non neque at, rutrum cursus mi. Nulla ut interdum ex, sit amet sagittis lorem. Morbi eu ipsum neque. Quisque consectetur odio neque, et facilisis turpis varius non. Donec ipsum tortor, aliquam a tellus quis, ultricies congue sem. Ut rhoncus vestibulum orci, et condimentum tellus hendrerit eget. Duis hendrerit erat ac arcu molestie aliquam. Donec convallis sem id elit cursus, sit amet tincidunt nunc commodo. Praesent vel augue ac ante tempor finibus.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium tincidunt felis. Nullam vestibulum iaculis varius. Cras sollicitudin vel erat quis tincidunt. Fusce ipsum nibh, mollis non neque at, rutrum cursus mi. Nulla ut interdum ex, sit amet sagittis lorem. Morbi eu ipsum neque. Quisque consectetur odio neque, et facilisis turpis varius non. Donec ipsum tortor, aliquam a tellus quis, ultricies congue sem. Ut rhoncus vestibulum orci, et condimentum tellus hendrerit eget. Duis hendrerit erat ac arcu molestie aliquam. Donec convallis sem id elit cursus, sit amet tincidunt nunc commodo. Praesent vel augue ac ante tempor finibus.
-                    </p>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut pretium tincidunt felis. Nullam vestibulum iaculis varius. Cras sollicitudin vel erat quis tincidunt. Fusce ipsum nibh, mollis non neque at, rutrum cursus mi. Nulla ut interdum ex, sit amet sagittis lorem. Morbi eu ipsum neque. Quisque consectetur odio neque, et facilisis turpis varius non. Donec ipsum tortor, aliquam a tellus quis, ultricies congue sem. Ut rhoncus vestibulum orci, et condimentum tellus hendrerit eget. Duis hendrerit erat ac arcu molestie aliquam. Donec convallis sem id elit cursus, sit amet tincidunt nunc commodo. Praesent vel augue ac ante tempor finibus.
-                    </p>                    
+                <div class="head">
+                    <h3>{{title}}</h3>
+                    <span class="txt-muted-light">Perubahan Terakhir : {{dateUpdate}}</span>
                 </div>
+                
                 <div class="termPrivacy-list">
-                    <ol type="A">
+                    <ol type="1">
+                        <li class="heading">Pelaporan</li>
+                            <p>
+                                Rekening yang dilaporkan adalah rekening terkait dugaan penipuan terkait Dunia Ikan Hias.
+                                Para Penghobi ikan hias atau Masyarakat umum bisa membuat laporan pada situs Fishcek.com dengan terlebih dahulu mengisi form yang disediakan pada fitur menu Buat Laporan. Pelapor diminta untuk mendaftar akun dan memberikan identitas pribadi pelapor yang valid agar jika diperlukan dapat dihubungi. Pelapor wajib memberikan kronologi dengan lengkap dan melampirkan foto/scan bukti transfer, screen capture percakapan dsb.. Laporan kemudian akan diverifikasi oleh admin Fishcek.com sekaligus memberikan notifikasi kepada pelapor terkait perubahan status laporannya. Berikan laporan yang benar, karena laporan tersebut menjadi Tanggung Jawab Pelapor.
+                            </p>
+                        <li class="heading">Sanggahan atau Normalisasi Rekening</li>
+                            <p>                                
+                                Jika anda sebagai Terlapor, anda BERHAK mengajukan sanggahan atas laporan, dan anda dapat mengajukan permohonan untuk dikeluarkan dalam database daftar laporan, Dan untuk diMasukan kedalam Daftar Normalisasi. Pemilik rekening dapat melaporkan melalui Whatsapp Fishcek.com (Chat saja, tidak menerima telepon) dengan melampirkan bukti-bukti penyanggahan. 
+                            </p>
+                        <li class="heading">Ruang Pertemuan Klarifikasi</li>
+                            <p>    
+                                Dalam hal tertentu, pengelola fishcek.com dapat mempertemukan antara pelapor dan pemilik rekening secara online/ Grup Whatsapp jika terjadi perselisihan/perbedaan pendapat. Baik pelapor dan pemilik rekening akan dikirimkan undangan berisi tautan/link melalui WA untuk memasuki ruang percakapan grup/fasilitas online yang diawasi oleh <strong>Ahli Hukum</strong> (jika tersedia akan dikenakan tarif) yang bekerja sama dengan <a href="https://www.fishcek.com" target="blank">Fishcek.com</a>.
+                                Jka Pelapor dan pemilik rekening tidak terjadi kesepahaman. Fishcek.com akan mengubah status laporan dari <strong>"verified"</strong> menjadi <strong>"dispute"</strong>.
+
+                            </p>
                         <li class="heading">Informasi yang dikumpulkan</li>
                             <p>
                                 Pada Website dan atau aplikasi Fishcek.com, anda dapat membuat dan mengecek nomor rekening dan atau nomor telepon seseorang. Jika anda sebagai pelapor, Anda dapat membuat laporan penipuan dengan mengisi form yang sudah disiapkan. Identitas yang anda Masukan adalah Identitas Asli Anda, Identitas Terlapor (Gunakan Nama Inisial), Kronologi, dan sertakan lampiran bukti tindakan terduga penipuan.
@@ -37,6 +45,11 @@
                                 Hati-hati terhadap tiruan yang mengatasnamakan Website <a href="https://www.fishcek.com" target="blank">Fishcek.com</a> Dilarang keras menggunakan Nama ataupun Logo <a href="https://www.fishcek.com" target="blank">Fishcek.com</a>.
                                 <span>Hak Kekayaan Intelektual <sup><b-icon icon="exclamation-octagon-fill"></b-icon></sup></span>
 
+                            </p>
+                        <li class="heading">Daftarkan Rekening</li>
+                            <p>                               
+                                Fitur ini dapat digunakan oleh para pelaku usaha di bidang ikan hias, baik itu reseller atau bahkan konsumen. Untuk mencegah banyaknya kasus penipuan.
+                                Catatan: Jika rekening yang di cek tidak ada, bukan  berati sebuah jaminan bahwa rekening tersebut pasti aman dan tidak terkait dugaan tindak pidana. Pemberian Bintang hanya bentuk pengakuan bahwa identitas pemilik rekening terlah terverifikasi.
                             </p>
                         <li class="heading">Perubahan dan Amandemen</li>
                             <p>
@@ -71,7 +84,8 @@ export default {
     Footer
   },
   data:()=>({
-      title:'Syarat & Ketentuan'
+      title:'Syarat & Ketentuan',
+      dateUpdate:'23 Agustus 2021'
   })
 }
 </script>

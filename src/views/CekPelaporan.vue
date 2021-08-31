@@ -1,5 +1,5 @@
 <template>
-    <div class="bc-image3 ">
+    <div class="bc-image2">
         <Navbar/>
         <div class="cekPenipuan-page container">
             <div class="boxed-fluid text-center">

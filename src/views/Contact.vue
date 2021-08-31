@@ -13,7 +13,7 @@
                         <router-link to="#">
                             <div class="contactUs-list b-t-5 border-blue">
                                 <b-icon icon="person-lines-fill" class="icon"></b-icon>
-                                <h5>+62 895 3263 93065</h5>
+                                <h5>{{contact[0].phone}}</h5>
                             </div>
                         </router-link>
                     </div>
@@ -21,7 +21,7 @@
                         <router-link to="#">
                             <div class="contactUs-list b-t-5 border-blue">
                                 <b-icon icon="person-lines-fill"></b-icon>
-                                <h5>+62 895 3263 93065</h5>
+                                <h5>{{contact[1].phone}}</h5>
                             </div>
                         </router-link>
                     </div>
@@ -29,7 +29,7 @@
                         <router-link to="#">
                             <div class="contactUs-list b-t-5 border-blue">
                                 <b-icon icon="person-lines-fill"></b-icon>
-                                <h5>+62 895 3263 93065</h5>
+                                <h5>{{contact[2].phone}}</h5>
                             </div>
                         </router-link>
                     </div>
@@ -37,7 +37,7 @@
                         <router-link to="#">
                             <div class="contactUs-list b-t-5 border-red">
                                 <b-icon icon="chat-square-dots-fill"></b-icon>
-                                <h5>info.fishcek@gmail.com</h5>
+                                <h5>{{contact[3].email}}</h5>
                             </div>
                         </router-link>
                     </div>
@@ -94,7 +94,13 @@ export default {
     Footer
   },
   data:()=>({
-      title:'Hubungi Kami'
+      title:'Hubungi Kami',
+      contact:[
+          { phone: '+62 XXXX-XXXX-XXXX', admin: 'Fred'},
+          { phone: '+62 XXXX-XXXX-XXXX', admin: 'Fred'},
+          { phone: '+62 XXXX-XXXX-XXXX', admin: 'Fred'},
+          { email: 'info.fishcek@gmail.com', admin: 'Fred'},
+        ]
   })
 }
 </script>

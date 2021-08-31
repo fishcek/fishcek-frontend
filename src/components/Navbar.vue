@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b-navbar type="dark" class="bc-white bx-shadow" fixed="top">
+        <b-navbar type="dark" class="bc-white bc-shadow" fixed="top">
           <div class="container">
             <button class="btn-cs btn-cs-blue-outline mobileToggle" v-b-toggle.sidebar-no-header>
               <b-icon icon="chevron-double-right" class="fs-15" style="font-weight: 600;"></b-icon>
