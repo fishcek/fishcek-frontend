@@ -127,7 +127,7 @@ router.beforeEach((to, from, next) => {
   const cekStorage=JSON.parse(localStorage.getItem('fishcek'));
   if(to.matched.some(record=> record.meta.requiresAuth)) {
         
-        if (cekStorage==null) {
+        if (cekStorage.auth.token=='') {
             next({
                 path: '/login',
                 params: { nextUrl: to.fullPath }
