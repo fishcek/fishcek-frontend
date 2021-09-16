@@ -124,8 +124,12 @@ const router = new VueRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    if(to.matched.some(record => record.meta.requiresAuth)) {
-        if (localStorage.getItem('fishcek') == null) {
+  const cekStorage=JSON.parse(localStorage.getItem('fishcek'));
+  const getToken=cekStorage.auth.token
+  console.log(getToken)
+  if(to.matched.some(record=> record.meta.requiresAuth)) {
+        
+        if (getToken.length<1) {
             next({
                 path: '/login',
                 params: { nextUrl: to.fullPath }
