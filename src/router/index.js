@@ -73,10 +73,7 @@ const routes = [
   {
     path: '/checkrekening/:norekening',
     name: 'Cek Rekening',
-    component: () => import(/* webpackChunkName: "about" */ '../views/CheckRekening.vue'),
-    meta:{
-      requiresAuth:true
-    }
+    component: () => import(/* webpackChunkName: "about" */ '../views/CheckRekening.vue')
   },
   {
     path: '/profil',
@@ -125,10 +122,9 @@ const router = new VueRouter({
 
 router.beforeEach((to, from, next) => {
   const cekStorage=JSON.parse(localStorage.getItem('fishcek'));
-  const getToken=cekStorage.auth.token
   if(to.matched.some(record=> record.meta.requiresAuth)) {
         
-        if (getToken.length<1) {
+        if (cekStorage.auth.token=='') {
             next({
                 path: '/login',
                 params: { nextUrl: to.fullPath }
