@@ -10,44 +10,31 @@
       
               <div class="login-register-form">
                 <span class="login-register-form-title">
-                  Masuk ke <span class="login-register-form-title-detail">Fishcek</span>
+                  Lupa Password <span class="login-register-form-title-detail"><router-link to="/home">Fishcek</router-link></span>
                 </span>
-                <form @submit.prevent="login()" ref="form">
+                <form @submit.prevent="prosesForgetPassword()" ref="form">
                   <div class="wrap-input-form" data-validate = "Valid email is required: ex@abc.xyz">
                     <div class="form-group">
-                      <input type="email" class="form-control" name="email" placeholder="Email" required v-model="email">
+                      <input type="email" class="form-control" name="emailTerdaftar" placeholder="Email Terdaftar" v-model="emailTerdaftar">
                     </div>
                   </div>
-                  
                   <div class="wrap-input-form" data-validate = "Valid email is required: ex@abc.xyz">
                     <div class="form-group">
-                      <input type="password" class="form-control" name="pass" placeholder="Password" required v-model="password">
+                      <input type="number" min="0" class="form-control" name="otp" placeholder="Kode OTP" v-model="kodeOtp">
                     </div>
+                    <p class="fs-10 text-center">Periksa kotak masuk atau spam pada email untuk mendapatkan kode OTP</p>
                   </div>
-                  
-                  <div class="text-right">
-                    <span class="fs-12 text-black"><router-link to="/login/lupaPassword" class="text-dark"> Lupa Password ?</router-link></span>
+
+                  <div class="wrap-input-form" data-validate = "Valid email is required: ex@abc.xyz">
+                    <div class="form-group">
+                      <input type="password" class="form-control" name="passwordBaru" placeholder="Password Baru" v-model="passwordBaru">
+                    </div>
                   </div>
 
                   <div class="container-login-register-btn">
-                    <input type="submit" class="btn-cs-form btn-cs-blue-outline m-t-15" value="Login">
+                    <input type="submit" class="btn-cs-form btn-cs-blue-outline m-t-15" value="Reset">
                   </div>
                 </form> 
-                  <div class="text-center p-t-12">
-                    <span class="fs-14">atau</span>
-                  </div>
-
-                  <div class="container-login-register-btn">
-                    <button class="btn-cs-form btn-cs-facebook-outline m-t-15" onclick="window.open('https://facebook.com/', 'Facebook' , 'height=500,width=500');">
-                      Login dengan Facebook
-                    </button>
-                  </div>
-
-                  <div class="container-login-register-btn">
-                    <button class="btn-cs-form btn-cs-google-outline m-t-15" onclick="window.open('https://accounts.google.com/o/oauth2/v2/auth/oauthchooseaccount?client_id=532352704633-6pkces9iboppp465idnovkcqtlsa8j7t.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Fwww.figma.com%2Ffinish_google_sso&response_type=code&scope=profile%20email&access_type=online&prompt=select_account&state=Onr%2BNlXfOwgG9mfd%2Fx6FZVF94asqIoXZmuu8Tm%2F9d1Yg&flowName=GeneralOAuthFlow', 'Google' , 'height=500,width=500');">
-                      Login dengan Google
-                    </button>
-                  </div>
                   
                   <div class="text-center fs-12 m-t-10">
                     Belum Punya Akun ? <router-link :to="'/register'">Daftar Disini</router-link>
@@ -77,7 +64,11 @@ export default {
   name: 'Home',
   data: () => ({
     email : '',
-    password : ''
+    password : '',
+    forget:'0',
+    emailTerdaftar : '',
+    kodeOtp : '',
+    passwordBaru : '',
   }),
   computed:{
     ...mapGetters({
@@ -96,18 +87,8 @@ export default {
       setToken : 'auth/setToken',
       setGuest : 'auth/setGuest'
     }),
-    login(){
-      var token           = '';
-      var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-      var charactersLength = characters.length;
-      for ( var i = 0; i < 20; i++ ) {
-        token += characters.charAt(Math.floor(Math.random() * 
-        charactersLength));
-      }
-      console.log(token)
-      this.setToken(token)
-      this.clearForm()
-      this.$router.push('/home')
+    prosesForgetPassword(){
+      this.$router.push('/login')
     }
     // login(){
     //   let dataLogin = new FormData()

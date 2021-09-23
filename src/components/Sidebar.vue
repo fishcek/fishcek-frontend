@@ -37,7 +37,8 @@
                         <span class="text-muted fs-12">Member</span>
                         <hr class="dashed">
                         <b-nav-item to="/profil" @click="hide, onFocus('c')">Profil</b-nav-item>
-                        <b-nav-item to="/myartikel" @click="hide">Artikel Saya</b-nav-item>
+                        <b-nav-item to="artikel/myartikel" @click="hide">Artikel Saya</b-nav-item>
+                        <b-nav-item to="artikel/inputartikel" @click="hide">Buat Artikel</b-nav-item>
                       </div>
                     </b-nav>
                   </nav>
@@ -72,6 +73,7 @@
                       </template>
                       <b-dropdown-item to="/profil">Profil</b-dropdown-item>
                       <b-dropdown-item to="/pelaporan">Buat Pelaporan</b-dropdown-item>
+                      <b-dropdown-item><router-link to="artikel/myartikel"> My Artikel </router-link></b-dropdown-item>
                       <!-- <b-dropdown-item to="/transaksi">Transaksi</b-dropdown-item> -->
                       <b-dropdown-item @click="logout">Logout</b-dropdown-item>
                   </b-nav-item-dropdown>

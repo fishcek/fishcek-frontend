@@ -76,6 +76,7 @@
                             </template>
                             <b-dropdown-item><router-link to="/profil"> Profil </router-link></b-dropdown-item>
                             <b-dropdown-item><router-link to="/pelaporan"> Buat Laporan </router-link></b-dropdown-item>
+                            <b-dropdown-item><router-link to="artikel/myartikel"> My Artikel </router-link></b-dropdown-item>
                             <!-- <b-dropdown-item to="/transaksi">Transaksi</b-dropdown-item> -->
                             <b-dropdown-item @click="logout">Logout</b-dropdown-item>
                         </b-nav-item-dropdown>

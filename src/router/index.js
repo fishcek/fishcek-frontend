@@ -24,6 +24,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
   },
   {
+    path: '/login/lupaPassword',
+    name: 'Masuk',
+    component: () => import(/* webpackChunkName: "about" */ '../views/lupaPassword.vue')
+  },
+  {
     path: '/register',
     name: 'Daftar',
     component: () => import(/* webpackChunkName: "about" */ '../views/Register.vue')
@@ -47,7 +52,6 @@ const routes = [
     path: '/cekpelaporan/:type',
     name: 'Cek Pelaporan',
     component : CekPelaporan
-    
   },
   {
     path: '/lapor/:type',
@@ -73,10 +77,7 @@ const routes = [
   {
     path: '/checkrekening/:norekening',
     name: 'Cek Rekening',
-    component: () => import(/* webpackChunkName: "about" */ '../views/CheckRekening.vue'),
-    meta:{
-      requiresAuth:true
-    }
+    component: () => import(/* webpackChunkName: "about" */ '../views/CheckRekening.vue')
   },
   {
     path: '/profil',
@@ -90,6 +91,22 @@ const routes = [
     path: '/pelaporan',
     name: 'Pelaporan',
     component: () => import(/* webpackChunkName: "about" */ '../views/Pelaporan.vue'),
+    meta:{
+      requiresAuth:true
+    }
+  },
+  {
+    path: 'artikel/myartikel',
+    name: 'MyArtikel',
+    component: () => import(/* webpackChunkName: "about" */ '../views/MyArtikel.vue'),
+    meta:{
+      requiresAuth:true
+    }
+  },
+  {
+    path: 'artikel/inputartikel',
+    name: 'InputArtikel',
+    component: () => import(/* webpackChunkName: "about" */ '../views/InputArtikel.vue'),
     meta:{
       requiresAuth:true
     }

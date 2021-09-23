@@ -12,7 +12,7 @@
       
               <div class="login-register-form">
                 <span class="login-register-form-title">
-                  Daftar Akun <span class="login-register-form-title-detail">Fishcek</span>
+                  Daftar Akun <span class="login-register-form-title-detail"><router-link to="/home">Fishcek</router-link></span>
                 </span>
                 <form @submit.prevent="register()" ref="form"> 
                   <div class="wrap-input-form" data-validate = "Valid email is required: ex@abc.xyz">
