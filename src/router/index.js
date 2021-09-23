@@ -92,6 +92,22 @@ const routes = [
     }
   },
   {
+    path: 'artikel/myartikel',
+    name: 'MyArtikel',
+    component: () => import(/* webpackChunkName: "about" */ '../views/MyArtikel.vue'),
+    meta:{
+      requiresAuth:true
+    }
+  },
+  {
+    path: 'artikel/inputartikel',
+    name: 'InputArtikel',
+    component: () => import(/* webpackChunkName: "about" */ '../views/InputArtikel.vue'),
+    meta:{
+      requiresAuth:true
+    }
+  },
+  {
     path: '/artikel',
     name: 'Artikel',
     component: () => import(/* webpackChunkName: "about" */ '../views/Artikel.vue')
