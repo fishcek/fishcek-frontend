@@ -43,7 +43,7 @@
                     <b-navbar-brand  to="/home" ><img src="../assets/img/logo-full.png" width="100" class="nav-img"></b-navbar-brand>
                     <div class="menuDesktop">
                       <b-nav-item><router-link to="/rekan">ReKAn</router-link></b-nav-item>
-                      <b-nav-item><router-link to="/artikel">Artikel</router-link></b-nav-item>
+                      <b-nav-item><router-link to="/artikel/ListArtikel">Artikel</router-link></b-nav-item>
                       <b-nav-item-dropdown text="Cek Pelaporan" right no-caret>
                           <b-dropdown-item><router-link to="/cekpelaporan/notelepon">Telepon</router-link></b-dropdown-item>
                           <b-dropdown-item><router-link to="/cekpelaporan/norekening">Rekening</router-link></b-dropdown-item>

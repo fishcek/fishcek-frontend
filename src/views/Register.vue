@@ -125,21 +125,21 @@ export default {
         dataRegis.append('password', this.password)
         dataRegis.append('password_confirmation', this.password_confirmation)
 
-        let config = {
-          method : "post",
-          url : "https://fishcek.herokuapp.com/api/v1/register",
-          data : dataRegis
-        }
+        // let config = {
+        //   method : "post",
+        //   url : "https://fishcek.herokuapp.com/api/v1/register",
+        //   data : dataRegis
+        // }
 
-        this.axios(config)
-        .then((response) => {
-          console.log(response)
-          this.clearForm()
+        // this.axios(config)
+        // .then((response) => {
+        //   console.log(response)
+        //   this.clearForm()
           this.$router.push('/login');
-        })
-        .catch((error) => {
-          console.log(error)
-        })
+        // })
+        // .catch((error) => {
+        //   console.log(error)
+        // })
 
       }
     }

@@ -3,15 +3,15 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import LaporPenipuan from '../views/LaporPenipuan.vue'
 import Welcome from '../views/Welcome.vue'
-import CekPelaporan from '../views/CekPelaporan.vue'
+import Artikel from '../views/Artikel.vue'
+import MyArtikel from '../views/MyArtikel.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
-    component: Home
+    redirect: '/home'
   },
   {
     path: '/home',
@@ -25,7 +25,7 @@ const routes = [
   },
   {
     path: '/login/lupaPassword',
-    name: 'Masuk',
+    name: 'Lupa Password',
     component: () => import(/* webpackChunkName: "about" */ '../views/lupaPassword.vue')
   },
   {
@@ -51,7 +51,7 @@ const routes = [
   {
     path: '/cekpelaporan/:type',
     name: 'Cek Pelaporan',
-    component : CekPelaporan
+    component: () => import(/* webpackChunkName: "about" */ '../views/CekPelaporan.vue')
   },
   {
     path: '/lapor/:type',
@@ -96,30 +96,34 @@ const routes = [
     }
   },
   {
+    path: '/artikel',
+    name: 'Artikel',
+    component: Artikel
+  },  
+  {
     path: 'artikel/myartikel',
     name: 'MyArtikel',
-    component: () => import(/* webpackChunkName: "about" */ '../views/MyArtikel.vue'),
+    component: MyArtikel,
     meta:{
       requiresAuth:true
     }
   },
+  // {
+  //   path:'/artikel',
+  //   component:Artikel,
+  //   children:[
+  //     {
+  //       path:':id',
+  //       component:MyArtikel,
+  //       props:true
+  //     }
+  //   ]
+
+  // },
   {
     path: 'artikel/inputartikel',
     name: 'InputArtikel',
     component: () => import(/* webpackChunkName: "about" */ '../views/InputArtikel.vue'),
-    meta:{
-      requiresAuth:true
-    }
-  },
-  {
-    path: '/artikel',
-    name: 'Artikel',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Artikel.vue')
-  },
-  {
-    path: '/myartikel',
-    name: 'MyArtikel',
-    component: () => import(/* webpackChunkName: "about" */ '../views/MyArtikel.vue'),
     meta:{
       requiresAuth:true
     }

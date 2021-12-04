@@ -16,15 +16,15 @@
                         <div class="col-lg-4">
                             <router-link to="#">
                                 <div class="reportRecap-list bc-blue-dark">
-                                    <h2>99999+</h2>
-                                    <h6>Penipuan melalui nomor telepon yang telah dilaporkan pengguna</h6>
+                                    <h2>{{rekap.totalLaporan}}</h2>
+                                    <h6>Penipuan dengan {{rekap.ket}} yang telah dilaporkan</h6>
                                 </div>
                             </router-link>
                         </div>
                         <div class="col-lg-4">
                             <router-link to="#">
                                 <div class="reportRecap-list bc-blue-dark">
-                                    <h2>99999+</h2>
+                                    <h2>{{rekap.totalBlackList}}</h2>
                                     <h6>Nomor telepon telah terblacklist pada sistem Fishcek</h6>
                                 </div>
                             </router-link>
@@ -32,7 +32,7 @@
                         <div class="col-lg-4">
                             <router-link to="#">
                                 <div class="reportRecap-list bc-blue-dark">
-                                    <h2>99999+</h2>
+                                    <h2>{{rekap.totalkerugian}}</h2>
                                     <h6>Total kerugian yang dilaporkan sejak 1 Januari 2018</h6>
                                 </div>
                             </router-link>
@@ -54,7 +54,8 @@ export default {
         pencarianPenipuan:'',
         noContoh:'',
         textPlaceholder:'',
-        txterror:''
+        txterror:'',
+        rekap:'',
     }),
     components : {
         Navbar,
@@ -69,20 +70,31 @@ export default {
     methods : {
         go(){
             this.type = this.$route.params.type
-
             if (this.type=='notelepon') {
                 this.type='Telepon'
-                this.noContoh='085795851996'
+                this.noContoh='081223849123'
                 this.textPlaceholder='Pencarian No Telepon'
+                this.rekap={
+                    ket:'nomor telepon',
+                    totalLaporan:'999+',
+                    totalBlackList:'999+',
+                    totalkerugian:'1,3M'
+                }
             }else{
                 this.type='Rekening'
-                this.noContoh='0238272088'
+                this.noContoh='041501009328503'
                 this.textPlaceholder='Pencarian No Rekening'
+                this.rekap={
+                    ket:'nomor rekening',
+                    totalLaporan:'999+',
+                    totalBlackList:'999+',
+                    totalkerugian:'1,5M'
+                }
             }
         },
         cariPenipuan(){
             if (this.pencarianPenipuan!=0) {
-                if (this.type=='notelepon') { //rekening
+                if (this.type=='Telepon') { //rekening
                 this.$router.push('/checkphone/'+this.pencarianPenipuan)
                 }else{
                 this.$router.push('/checkrekening/'+this.pencarianPenipuan)
@@ -91,9 +103,7 @@ export default {
                 this.txterror='Kolom Pencarian Harus Diisi'
                 this.$refs.pencarian.focus();
             }
-            
-            console.log(this.tabIndex)
-            console.log(this.pencarianPenipuan)
+            // console.log(this.pencarianPenipuan)
         }
     },
     created(){
