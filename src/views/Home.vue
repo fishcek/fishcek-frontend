@@ -47,7 +47,42 @@
             </div>
         </div>
       </section>
-    
+
+      <section id="rekapLaporan" class="rekapLaporan">
+        <div class="container" data-aos="fade-up">
+            <div class="rekapLaporan-page bc-white bx-shadow">
+                <div class="boxed">
+                  <div class="row m-l-10 m-r-10">
+                        <div class="col-lg-4">
+                            <router-link to="#">
+                                <div class="recap-list bc-blue-dark">
+                                    <h2>1234567</h2>
+                                    <h6>Kasus Penipuan yang telah dilaporkan</h6>
+                                </div>
+                            </router-link>
+                        </div>
+                        <div class="col-lg-4">
+                            <router-link to="#">
+                                <div class="recap-list bc-blue-dark">
+                                    <h2>1234567</h2>
+                                    <h6>Rekening bank yang telah terblacklist</h6>
+                                </div>
+                            </router-link>
+                        </div>
+                        <div class="col-lg-4">
+                            <router-link to="#">
+                                <div class="recap-list bc-blue-dark">
+                                    <h2>Rp. 1234567</h2>
+                                    <h6>Total kerugian yang dilaporkan</h6>
+                                </div>
+                            </router-link>
+                        </div>
+                  </div>                  
+                </div>
+            </div>
+        </div>
+      </section>
+
       <section id="artikel" class="artikel">
         <div class="container" data-aos="fade-up">
             <div class="artikel-page bc-image3">
@@ -60,6 +95,7 @@
             </div>
         </div>
       </section>
+
       <section id="faq" class="faq">
         <div class="container" data-aos="fade-up">
             <div class="faq-page bc-blur">

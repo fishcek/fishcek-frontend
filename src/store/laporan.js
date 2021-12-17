@@ -3,7 +3,8 @@ export default{
     state : {
         pencarianPenipuan : '',
         kategori :'',
-        provider : ''
+        provider : '',
+        nomorPenipuanLapor:''
     },
     mutations:{
         setPencarian : (state, payload) => {
@@ -15,17 +16,24 @@ export default{
         setProvider : (state, payload) => {
             console.log(payload)
             state.provider = 'Nama Provider';          
+        },
+        setNumberPhone:(state, payload)=>{
+            state.nomorPenipuanLapor=payload
         }
     },
     actions :{
         setProvider : ({commit}, payload) => {
             commit('setProvider', payload)
+        },
+        setNumberPhone : ({commit}, payload) => {
+            commit('setNumberPhone', payload)
         }
     },
     getters:{
         pencarianPenipuan : state => state.pencarianPenipuan,
         kategori : state => state.kategori,
-        provider : state => state.provider
+        provider : state => state.provider,
+        nomorPenipuanLapor : state => state.nomorPenipuanLapor
                 
     }
 }

@@ -5,6 +5,7 @@ import LaporPenipuan from '../views/LaporPenipuan.vue'
 import Welcome from '../views/Welcome.vue'
 import Artikel from '../views/Artikel.vue'
 import MyArtikel from '../views/MyArtikel.vue'
+import Pelaporan from '../views/Pelaporan.vue'
 
 Vue.use(VueRouter)
 
@@ -90,11 +91,26 @@ const routes = [
   {
     path: '/pelaporan',
     name: 'Pelaporan',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Pelaporan.vue'),
+    component:Pelaporan,
     meta:{
       requiresAuth:true
     }
   },
+  // {
+  //   path:'/pelaporan',
+  //   component:Pelaporan,
+  //   meta:{
+  //     requiresAuth:true
+  //   },
+  //   children:[
+  //     {
+  //       path:':id',
+  //       component:Laporkan,
+  //       props:true
+  //     }
+  //   ]
+
+  // },
   {
     path: '/artikel',
     name: 'Artikel',

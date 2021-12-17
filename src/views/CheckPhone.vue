@@ -17,7 +17,7 @@
                                     <h3>{{nohp}}</h3> 
                                     <h5>Pernah / Belum Pernah Dilaporkan</h5>
                                     <div class="m-t-10">
-                                        <input type="button" value="Laporkan" class="btn-cs btn-cs-red m-r-5">
+                                        <input type="button" value="Laporkan" class="btn-cs btn-cs-red m-r-5" @click="getReport()">
                                         <input type="button" value="Tulis Review" class="btn-cs btn-cs-yellow">
                                     </div>
                                 </div>
@@ -97,6 +97,7 @@
 <script>
 import Navbar from '../components/Navbar.vue'
 import Footer from '../components/Footer.vue'
+import {mapActions, mapGetters} from 'vuex'
 export default {
     data:()=>({
         nohp:'',
@@ -133,7 +134,20 @@ export default {
         Navbar,
         Footer
     },
+    computed:{
+        ...mapGetters({
+            nomorPenipuanLapor:'laporan/nomorPenipuanLapor',
+            
+            guest:'auth/guest'
+        })
+    },
     methods : {
+        ...mapActions({
+            setNumberPhone:'laporan/setNumberPhone'
+        }),
+        getReport(){
+            this.$router.push('/lapor/notelepon');
+        },
         go(){
             let nomor=this.$route.params.nohp
             this.nohp = nomor
