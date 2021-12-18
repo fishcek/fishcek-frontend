@@ -19,6 +19,7 @@ export default{
         },
         setNumberPhone:(state, payload)=>{
             state.nomorPenipuanLapor=payload
+            console.log(state.nomorPenipuanLapor)
         }
     },
     actions :{

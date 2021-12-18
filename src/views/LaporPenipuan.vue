@@ -889,10 +889,29 @@ export default {
             this.$nextTick(() => {
             this.show = true
             })
+        },
+        getValuePelaporan(){
+            const cekStorage=JSON.parse(localStorage.getItem('fishcek'));
+            const varNumber = cekStorage.laporan.nomorPenipuanLapor
+            const params = varNumber.split('-')
+            let type = params[0]
+            switch (type) {
+                case 'isTelepon':
+                    
+                    break;
+                case 'isRekening':
+                    
+                    break;
+            
+                default:
+                    break;
+            }
         }
     },
     created(){
         this.go()
+        this.getValuePelaporan()
+        
     }
 
     

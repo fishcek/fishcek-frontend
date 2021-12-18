@@ -14,7 +14,7 @@
                             </b-col>
                             <b-col cols="12" lg="7" md="12" sm="12">
                                 <div class="text-detail text-white txt-shadow">
-                                    <h3>{{nohp}}</h3> 
+                                    <h3>{{nohp}}</h3>
                                     <h5>Pernah / Belum Pernah Dilaporkan</h5>
                                     <div class="m-t-10">
                                         <input type="button" value="Laporkan" class="btn-cs btn-cs-red m-r-5" @click="getReport()">
@@ -146,6 +146,8 @@ export default {
             setNumberPhone:'laporan/setNumberPhone'
         }),
         getReport(){
+            this.setNumberPhone('isTelepon-'+this.nohp)
+            console.log('dari '+this.nohp)
             this.$router.push('/lapor/notelepon');
         },
         go(){
